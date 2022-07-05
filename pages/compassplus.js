@@ -105,7 +105,7 @@ export default function CompassPlus() {
 
     </Content>
     <CardContHeader>
-      But wait, there's more! Take a look at my other projects or contact me with the links below.
+      But wait, there&apos;s more! Take a look at my other projects or contact me with the links below.
     </CardContHeader>
     <CardCont>
         <ProjectCard />

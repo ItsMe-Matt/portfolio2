@@ -150,7 +150,7 @@ const Icon = styled.div`
 // Desktop and Tablet styles
 @media screen and (min-width: 768px){
 margin: 0 6px;
-padding: 6px;
+padding: 4px;
 box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
 background-color: #122C5C;
 border-radius: 4px;
