@@ -19,7 +19,7 @@ export default function CompassPlus() {
     
     <Content>
       <ProjectHeader 
-      tagline='Designed to become Translink’s Official Mobile Application'
+      tagline='Designed to become Translink&apos;s Official Mobile Application'
       description='CompassPlus is an app designed to replace your physical Compass card with a digital NFC card you can use on your phone.'
       role='UI/UX Designer'
       timeframe='3 months (Sept - Dec 2021)'

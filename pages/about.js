@@ -44,6 +44,7 @@ export default function About() {
         <Image 
         src="/static/MatthewZhao_GoA.png"
         layout="fill"
+        alt='This is us wireframing an app we built in high school.'
         />
       </GoaImg>
     </ContentBlock>
@@ -53,6 +54,7 @@ export default function About() {
         <Image 
         src="/static/MatthewZhao_Gundam.png"
         layout="fill"
+        alt='This is a gundam box art project I made for class.'
         />
       </GundamImg>
       <ContentP pwidth={"425px"}>

@@ -20,12 +20,13 @@ export default function Resume() {
         layout='fill'
         objectFit='cover'
         objectPosition="center"
+        alt='This is my resume. I hope you like it.'
         />
         </ResumeCont>
 
     </Content>
     <CardContHeader>
-      Psh...hey! I've got some pretty cool projects you should take a look at.
+      Psh...hey! I&apos;ve got some pretty cool projects you should take a look at.
     </CardContHeader>
     <CardCont>
         <ProjectCard />
