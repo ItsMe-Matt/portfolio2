@@ -1,12 +1,28 @@
 import styled from 'styled-components'
 import Image from 'next/image'
+import Link from 'next/link'
 
 import Header from '@/comps/Header'
 import ProjectCard from '@/comps/ProjectCard'
 import Footer from '@/comps/Footer'
+import { useState } from 'react'
 
 
 export default function Home() {
+
+  var [email, setEmail] = useState(false)
+
+  function emailIconClick(){
+    if (email === true) {
+      setEmail(false)
+    }
+    else {
+      setEmail(true)
+    }
+    console.log(email)
+  }
+
+
   return <Container>
     <HeaderCont>
       <Header />
@@ -28,13 +44,17 @@ export default function Home() {
           </HeroTxtP>
 
           <HeroBtnRow>
-            <HeroBtn1>
-              Contact Me
-            </HeroBtn1>
-
-            <HeroBtn2>
-              About Me
-            </HeroBtn2>
+            <Link href="/resume">
+              <HeroBtn1>
+                Read Resume
+              </HeroBtn1>
+            </Link>
+            
+            <Link href="/about">
+              <HeroBtn2>
+                Learn about me
+              </HeroBtn2>
+            </Link>
           </HeroBtnRow>
         </HeroTxtCont>
 

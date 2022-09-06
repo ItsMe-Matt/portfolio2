@@ -29,6 +29,12 @@ export default function Header() {
                 </NavBtn1>
             </Link>
 
+            <Link href="/contact">
+                <NavBtn3>
+                    Contact Me
+                </NavBtn3>
+            </Link>
+
             <IconCont>
             <a href="https://www.linkedin.com/in/mlzhao/" target="_blank">
                 <Icon>
@@ -43,11 +49,11 @@ export default function Header() {
                 </Icon>
             </a>
 
-            <Link href="/">
+            <a href="mailto:matthewlukez@yahoo.com">
                 <Icon>    
                     <SiMaildotru size="26px" color="#fff"/>
                 </Icon>
-            </Link>
+            </a>
         </IconCont>
         </NavCont>
     </Container>
@@ -99,7 +105,6 @@ margin-right: 8px;
 cursor: pointer;
 display: flex;
 align-items: flex-end;
-
 &:hover {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
     transition: 1.2s;
@@ -107,7 +112,6 @@ align-items: flex-end;
 }
 // Mobile styles
 @media screen and (max-width: 767px) {
-
 }
 `
 
@@ -117,14 +121,11 @@ font-family: Montserrat;
 font-weight: 500;
 font-size: 1em;
 color: #fff;
-
 box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
 background: #122C5C;
-
 border-radius: 8px;
 padding: 8px 32px;
 cursor: pointer;
-
 &:hover {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
     transition: 2s;
@@ -138,7 +139,8 @@ cursor: pointer;
 const IconCont = styled.div`
 // Desktop and Tablet styles
 @media screen and (min-width: 768px){
-display: flex;
+//display: flex;
+display: none;
 }
 // Mobile styles
 @media screen and (max-width: 767px) {
@@ -155,7 +157,8 @@ box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
 background-color: #122C5C;
 border-radius: 4px;
 cursor: pointer;
-
+display: flex;
+align-items: center;
 &:hover {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
     transition: 1.2s;
@@ -163,7 +166,5 @@ cursor: pointer;
 }
 // Mobile styles
 @media screen and (max-width: 767px) {
-
 }
-
 `

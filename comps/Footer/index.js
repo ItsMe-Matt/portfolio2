@@ -21,9 +21,12 @@ export default function Footer() {
                 </Icon>
             </a>
 
-            <Link href="/">
+            <Link href="mailto:matthewlukez@yahoo.com">
                 <Icon>    
                     <SiMaildotru size="32px" color="#fff"/>
+                    <IconEmail>
+                        MatthewLukeZ@yahoo.com
+                    </IconEmail>              
                 </Icon>
             </Link>
         </IconCont>
@@ -69,11 +72,17 @@ const Icon = styled.div`
 // Desktop and Tablet styles
 @media screen and (min-width: 768px){
 margin: 0 8px;
-padding: 6px;
-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+padding: 6px 6px 4px 6px;
+box-shadow: 0px 2px 4px rgba(40, 40, 40, 0.4);
 background-color: #122C5C;
 border-radius: 4px;
 cursor: pointer;
+display: flex;
+align-items : center;
+&:hover {
+    box-shadow: 0px 2px 6px rgba(40, 40, 40, 0.8);
+    transition: 1s
+}
 }
 // Mobile styles
 @media screen and (max-width: 767px) {
@@ -87,9 +96,25 @@ const Text = styled.div`
 @media screen and (min-width: 768px){
 font-family: 'Oxygen';
 font-weight: 300;
-font-size: 16px;
+font-size: 1em;
 
 color: #868686;
+}
+// Mobile styles
+@media screen and (max-width: 767px) {
+
+}
+`
+
+const IconEmail = styled.div`
+// Desktop and Tablet styles
+@media screen and (min-width: 768px){
+font-family: 'Oxygen';
+font-weight: 500;
+font-size: 1em;
+margin: 0 8px;
+
+color: #fff;
 }
 // Mobile styles
 @media screen and (max-width: 767px) {
