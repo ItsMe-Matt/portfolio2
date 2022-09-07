@@ -2,7 +2,12 @@ import styled from "styled-components"
 import { SiMaildotru, SiLinkedin, SiGithub } from 'react-icons/si'
 import Link from 'next/link'
 
-export default function Footer() {
+export default function Footer(
+    onEmailClick=()=>{console.log("yes")},
+    emailWidth="100%",
+    emailMargin="0 8px"
+
+) {
 
 
 
@@ -21,14 +26,19 @@ export default function Footer() {
                 </Icon>
             </a>
 
-            <Link href="mailto:matthewlukez@yahoo.com">
-                <Icon>    
+            <Icon>
+                <div onClick={()=>onEmailClick()}>
                     <SiMaildotru size="32px" color="#fff"/>
-                    <IconEmail>
-                        MatthewLukeZ@yahoo.com
-                    </IconEmail>              
-                </Icon>
-            </Link>
+                </div>  
+                
+                <IconEmail
+                emailM={emailMargin}
+                emailW={emailWidth}
+                >
+                    MatthewLukeZ@yahoo.com
+                </IconEmail>              
+            </Icon>
+
         </IconCont>
        
        <Text>
@@ -112,7 +122,9 @@ const IconEmail = styled.div`
 font-family: 'Oxygen';
 font-weight: 500;
 font-size: 1em;
-margin: 0 8px;
+overflow: hidden;
+padding: ${(props)=>props.emailM};
+width: ${(props)=>props.emailW};
 
 color: #fff;
 }
