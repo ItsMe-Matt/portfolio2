@@ -11,15 +11,22 @@ import { useState } from 'react'
 export default function Home() {
 
   var [email, setEmail] = useState(false)
+  var [emailW, setEmailW] = useState("0")
+  var [emailM, setEmailM] = useState("0")
 
   function emailIconClick(){
     if (email === true) {
       setEmail(false)
+      setEmailW("100%")
+      setEmailM("0 8px")
+      
     }
-    else {
+    if (email === false) {
+      setEmailM("0")
+      setEmailW("0")
+
       setEmail(true)
     }
-    console.log(email)
   }
 
 
@@ -63,6 +70,7 @@ export default function Home() {
           src="/static/MatthewZhao_ProfilePicture.png"
           layout='fill'
           alt='A beautiful picture of Matt&apos;s beautiful face'
+          priority = "true"
           />
 
         </HeroImgCont>
@@ -78,7 +86,11 @@ export default function Home() {
       </CardCont>
     </Content>
 
-    <Footer />
+    <Footer 
+    onIconClick={emailIconClick}
+    emailWidth={emailW}
+    emailMargin={emailM}
+    />
 
   </Container>
 }
@@ -271,6 +283,7 @@ border-radius: 12px;
 filter: drop-shadow(12px 12px 0px #122C5C);
 margin: 0 12px 0 0;
 overflow: hidden;
+position: relative;
 }
 // Mobile styles
 @media screen and (max-width: 767px) {

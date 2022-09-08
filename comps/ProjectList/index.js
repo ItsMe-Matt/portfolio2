@@ -67,7 +67,7 @@ display: flex;
 justify-content: space-between;
 width: 703px;
 
-margin: 32px 0 0 0;
+margin: 32px 0;
 }
 // Mobile styles
 @media screen and (max-width: 767px) {

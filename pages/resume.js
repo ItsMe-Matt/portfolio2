@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import Image from 'next/image'
+import { useState } from 'react'
 
 
 import Header from '@/comps/Header'
@@ -8,6 +9,26 @@ import Footer from '@/comps/Footer'
 
 
 export default function Resume() {
+
+  var [email, setEmail] = useState(false)
+  var [emailW, setEmailW] = useState("0")
+  var [emailM, setEmailM] = useState("0")
+
+  function emailIconClick(){
+    if (email === true) {
+      setEmail(false)
+      setEmailW("100%")
+      setEmailM("0 8px")
+      
+    }
+    if (email === false) {
+      setEmailM("0")
+      setEmailW("0")
+
+      setEmail(true)
+    }
+  }
+
   return <Container>
     <HeaderCont>
       <Header />
@@ -36,7 +57,11 @@ export default function Resume() {
         />
 
       </CardCont>
-    <Footer />
+    <Footer 
+    onIconClick={emailIconClick}
+    emailWidth={emailW}
+    emailMargin={emailM}
+    />
 
   </Container>
 }

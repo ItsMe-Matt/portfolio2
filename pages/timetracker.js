@@ -11,7 +11,7 @@ import ProjectP from '@/comps/ProjectP'
 import Footer from '@/comps/Footer'
 import ProjectList from '@/comps/ProjectList'
 
-export default function CompassPlus() {
+export default function Timetracker() {
 
   var [email, setEmail] = useState(false)
   var [emailW, setEmailW] = useState("0")
@@ -40,12 +40,13 @@ export default function CompassPlus() {
     
     <Content>
       <ProjectHeader 
-      tagline='Designed to become Translink&apos;s Official Mobile Application'
-      description='CompassPlus is an app designed to replace your physical Compass card with a digital NFC card you can use on your phone.'
+      tagline='An organization&apos;s
+      internal-use timetracking app'
+      description='This app is designed to help volunteers and mentors of Game of Apps to record and track the amount of time spent in each activity and project to provide accurate information to sponsors.'
       role='UI/UX Designer'
-      timeframe='3 months (Sept - Dec 2021)'
-      purpose='Class Project'
-      tools='Figma, Illustrator, InDesign, React, Expo'
+      timeframe='3 months (March - May 2022)'
+      purpose='Practicum'
+      tools='Figma'
       />
 
 
@@ -60,44 +61,50 @@ export default function CompassPlus() {
           <SectionCont id='role'>
             <ProjectH1P 
             title='My Role'
-            description='My role in this project was as a UI/UX designer. I worked alongside 2 other designers, 1 developer, and 2 hybrids (designer and developers). I mostly designed components and some screen layouts. I also designed the business cards and the website we would come to use for our app.'/>
+            description='My role in this project was as a UI/UX designer. I researched, surveyed, and collaborated with the end users of the app to put together an app that was the least onerous and most efficient for its users. 
+            '/>
           </SectionCont>
 
           <SectionCont id='user'>
             <ProjectH1P 
             title='Our Users'
-            description='Through our user survey, we learned about some of our target audience’s pain points and needs, as well as how we should prioritize the development of certain features and functions. We also learned if there was a need and use for this app and the results of the user testing reflected that yes, there is a need and use for the app.'
+            description='Our frontend users would be our mentors and volunteers at Game of Apps. They would be the ones that the app would be tracking for hours spent. Our backend users would be the administration team at Game of Apps and they would be the ones that receives the information to then pass it on to the sponsors. Through interviews and surveys, we learned that a lot of mentors had already used their own calendars on their Apple, Google, or other providers to keep track of their time. 
+            '
             />
             <ProjectList
             LTitle='Pain Points'
             RTitle='Needs'
-            LPoint1='Forgetting their Compass Card at home and having to buy a new one to be able to use transit.'
-            LPoint2='Realizing that you have a low balance on your card and needing to get in a physical queue to reload despite being low on time.'
-            LPoint3='Having to use different apps for navigation and interruption alerts.'
-            RPoint1='To have your compass card always with you through your phone.'
-            RPoint2='To be able to reload your compass card whenever and wherever you are.'
-            RPoint3='To manage everything transit-related in one convenient app.'
+            LPoint1='Manually inputting each event into the app or manual effort exceeding app’s efficiency'
+            LPoint2='Lack of privacy and divide between personal calendar and work calendar'
+            LPoint3='Constantly spending time and effort outside of usually workflow to manage app.'
+            RPoint1='Be an android app.'
+            RPoint2='Be able to import calendars into app.'
+            RPoint3='To display total hours spent.'
+            />
+            <ProjectP
+            description='After determining our users, their needs, and their pain points, I started researching methods of achieving our goal. The methods that I looked at were Apple Calendar, Google Calendar, and Harvest. After researching and presenting the research to the users and team, we decided on using Google Calendar. We had decided to go with Google Calendar because the organization had already set up an organizational account and everyone already had an account. Permissions would be easier to handle because the accounts were connected by the organization and costs would be low because this was a service we were already using. This would also help us keep the information within our organization as we wouldn’t be relying on any third party apps to manage our information. 
+            '
             />
           </SectionCont>
 
           <SectionCont id='problem'>
             <ProjectH1P 
             title='Problem Identification'
-            description='When riders first start using Translink, they have to know how to use Translink and its routes, get a compass card or ticket and make sure they have enough funds to get them to their destination. Even experienced riders may forget their compass card every now and then. The problem is that to learn how to use Translink, get a ticket or compass card, and fill up the funds of the card could sometimes be in different places. You would have to use different apps and go to different locations. Our app aims to solve that problem'
+            description='When our administration is asked about the total hours being put into the program by mentors and volunteers, our administrators usually reply with a rough estimate. However, this estimate isn’t the most accurate or precise and that is that problem that this app aims to solve.'
             />
           </SectionCont>
 
           <SectionCont id='solution'>
             <ProjectH1P 
             title='Solution and Goals'
-            description='Our solution is to develop a cross-platform application that allows you to find your route through Translink, buy tickets, and reload them for your trip, with the added feature of checking for live Translink updates. This would allow experienced riders to continue using Translink without losing time in case they are missing their compass card or if they are going to a place they are not familiar with. This would also allow new travelers to easily learn how to navigate through Translink with one convenient application.'
+            description='Our solution was to develop an app that would collect the calendar and schedules from our mentors and volunteers and output the information to the administrator so that they would be able to share and communicate it with the sponsors and hopefully receive more money to continue expanding the scope of our projects.'
             />
           </SectionCont>
 
           <SectionCont id='design'>
             <ProjectH1P 
-            title='Design Process'
-            description='Taking our goal into consideration, we began the design of our low fidelity and medium-fidelity prototype. I was personally in charge of the card page. For the low fidelity, it felt really strange and clunky. I initially drew inspiration from other mobile payment apps like Apple Pay or Google Pay. However, as designs and user testing progressed, I found that users much preferred a more Starbucks-styled card page, so I based the next design on that.'
+            title='Process'
+            description='After finding the method we would use for sharing events and calendars, I started developing the user flow. Initially, I thought that it would be a good idea for frontend users to import their calendars from their private accounts, however not everyone uses Google Calendar to keep track of their schedules and events so it would not apply to everyone. It would also be less private as they could accidentally import the wrong calendar or save an event to the wrong calendar. They would also manually have to share the calendar with the app. Instead, since everyone had a Google organization account, they could just import their pre-existing calendar or create a new one. Because the organization is connected together, we could just access all the calendars at once with an admin account. The user flow we ended with is this. The frontend user would either import their personal calendars or input their events with a recurring event into their organization Google account. Then through the organization, a service account with administrative privileges would access their calendars and tally up their hours based on the input of desired timeframe through the app by the backend users.'
             />
             <ProjectP 
             description='As the designing progressed, another team member created their own version of my cards page, and after a vote and minor user testing, we decided to progress with their design instead. After that, I decided to move on to designing components. With designing components, there was once again a hand off and evolution of ideas and designs especially when we handed the designs over to the developers.'
@@ -107,7 +114,7 @@ export default function CompassPlus() {
           <SectionCont id='final'>
             <ProjectH1P 
             title='Final Designs'
-            description='I am proud of the application the team was able to put together. I was also proud of the work I produced with this application. I had designed several components and one way or another, my designs had reached the final product of the app either completely intact or evolved into what is seen at the end.'
+            description='Currently the app is still being developed by our development team at Game of Apps.'
             />
           </SectionCont>
 
