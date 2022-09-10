@@ -27,7 +27,7 @@ export default function Footer({
 
             <Icon>
                 <div onClick={()=>{onIconClick()}}>
-                    <SiMaildotru size="32px" color="#fff"/>
+                    <SiMaildotru size="30px" color="#fff"/>
                 </div>  
                 
                 <IconEmail

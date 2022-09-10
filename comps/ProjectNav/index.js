@@ -41,7 +41,7 @@ export default function ProjectNav({
 
         <Link href="#design">
             <Label>
-                Design Process
+                Process
             </Label>
         </Link>
 

@@ -81,6 +81,7 @@ font-family: Montserrat;
 font-weight: 600;
 font-size: 1.5em;
 cursor: pointer;
+color: #122C5C;
 }
 // Mobile styles
 @media screen and (max-width: 767px) {
