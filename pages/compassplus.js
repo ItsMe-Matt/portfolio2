@@ -11,6 +11,7 @@ import ProjectP from '@/comps/ProjectP'
 import Footer from '@/comps/Footer'
 import ProjectList from '@/comps/ProjectList'
 
+
 export default function CompassPlus() {
 
   var [email, setEmail] = useState(false)
@@ -78,6 +79,18 @@ export default function CompassPlus() {
             RPoint2='To be able to reload your compass card whenever and wherever you are.'
             RPoint3='To manage everything transit-related in one convenient app.'
             />
+
+            <SurveyImgCont>
+              <Image
+              src="/static/CompassPlus_Survey.gif"
+              width={989}
+              height={735}
+              />
+            </SurveyImgCont>
+
+            <Caption>
+              These were some of the questions and results of our preliminary survey.
+            </Caption>
           </SectionCont>
 
           <SectionCont id='problem'>
@@ -236,6 +249,21 @@ const SectionCont = styled.div`
 }
 `
 
+const SurveyImgCont = styled.div`
+// Desktop and Tablet styles
+@media screen and (min-width: 768px) {
+width: 100%;
+overflow: hidden;
+position: relative;
+border-radius: 12px;
+filter: drop-shadow(0 0 1px #000);
+margin: 48px 0 16px 0;
+}
+// Mobile styles
+@media screen and (max-width: 767px) {
+}
+`
+
 const NavCont = styled.div`
 // Desktop and Tablet styles
 @media screen and (min-width: 768px){
@@ -270,6 +298,23 @@ display: flex;
 justify-content: space-between;
 align-items: flex-end;
 margin: 0 0 0 0;
+}
+// Mobile styles
+@media screen and (max-width: 767px) {
+
+}
+`
+
+const Caption = styled.div`
+// Desktop and Tablet styles
+@media screen and (min-width: 768px) {
+width: 100%;
+text-align: center;
+font-family: 'Oxygen';
+font-weight: 300;
+font-size: 1em;
+
+color: #404040;
 }
 // Mobile styles
 @media screen and (max-width: 767px) {
