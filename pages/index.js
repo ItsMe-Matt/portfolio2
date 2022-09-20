@@ -110,7 +110,7 @@ align-items: center;
 }
 
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
 
 }
 `
@@ -125,11 +125,8 @@ width: 1024px;
 padding: 0 24px;
 background-color: rgba(255,255,255, 0.8);
 }
-// Tablet styles
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-}
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
 }
 `
 
@@ -144,20 +141,15 @@ display: flex;
 flex-direction: column;
 align-items: center;
 }
-// Tablet styles
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-background-color: blue;
-padding: 0 16px 0 16px;
-}
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
 
 }
 `
 
 const HeroCont = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
 width: 915px;
 display: flex;
 justify-content: space-between;
@@ -165,16 +157,24 @@ align-items: flex-end;
 margin: 56px 0 106px 0;
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
+}
+`
+
+const HeroTxtCont = styled.div`
+// Desktop and Tablet styles
+@media screen and (min-width: 1024px) {
+width: 488px;
+}
+// Mobile styles
+@media screen and (max-width: 1023px) {
 
 }
 `
-const HeroTxtCont = styled.div`
-width: 488px;
-`
+
 const HeroTxtH1 = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
 font-family: 'Montserrat';
 font-weight: 900;
 font-size: 1.5em;
@@ -183,13 +183,14 @@ margin: 0 0 8px 0;
 
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
 
 }
 `
+
 const HeroTxtH2 = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
 font-family: 'Montserrat';
 font-weight: 900;
 font-size: 2.25em;
@@ -197,12 +198,13 @@ color: #122C5C;
 margin: 0 0 16px 0;
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
 }
 `
+
 const HeroTxtP = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
 font-family: 'Oxygen';
 font-weight: 300;
 font-size: 1.125em;
@@ -212,22 +214,24 @@ color: #868686;
 margin: 0 0 40px 0;
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
 }
 `
+
 const HeroBtnRow = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
 display: flex;
 align-items: baseline;
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
 }
 `
+
 const HeroBtn1 = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
 display: flex;
 justify-content: center;
 align-items: center;
@@ -249,13 +253,13 @@ cursor: pointer;
 }
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
 }
 `
 
 const HeroBtn2 = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
 display: flex;
 justify-content: center;
 align-items: center;
@@ -266,6 +270,7 @@ font-size: 1em;
 color: #122C5C;
 
 margin: 0 0 0 40px;
+
 cursor: pointer;
 &:hover {
     font-weight: 600;
@@ -273,13 +278,13 @@ cursor: pointer;
 }
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
 }
 `
 
 const HeroImgCont = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
 width: 346px;
 height: 436px;
 border-radius: 12px;
@@ -289,12 +294,13 @@ overflow: hidden;
 position: relative;
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
 }
 `
+
 const CardCont = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
 width: 915px;
 display: flex;
 justify-content: space-between;
@@ -302,7 +308,7 @@ align-items: flex-end;
 margin: 0 0 0 0;
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
 
 }
 `

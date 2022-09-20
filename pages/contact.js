@@ -85,13 +85,8 @@ display: flex;
 flex-direction: column;
 align-items: center;
 }
-// Tablet styles
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-background-color: blue;
-padding: 0 16px 0 16px;
-}
 // Mobile styles
-@media screen and (max-width: 1047px) {
+@media screen and (max-width: 1023px) {
 
 }
 `
@@ -107,13 +102,8 @@ width: 1024px;
 padding: 0 24px;
 background-color: rgba(255,255,255, 0.8);
 }
-// Tablet styles
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-background-color: blue;
-padding: 0 16px 0 16px;
-}
 // Mobile styles
-@media screen and (max-width: 1047px) {
+@media screen and (max-width: 1023px) {
 
 }
 `
@@ -131,14 +121,14 @@ flex-direction: column;
 align-items: center;
 }
 // Mobile styles
-@media screen and (max-width: 1047px) {
+@media screen and (max-width: 1023px) {
 
 }
 `
 
 const HeroCont = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
 width: 915px;
 display: flex;
 justify-content: space-between;
@@ -146,17 +136,26 @@ align-items: flex-end;
 margin: 56px 0 106px 0;
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
 
 }
 `
 
 const HeroTxtCont = styled.div`
+
+// Desktop and Tablet styles
+@media screen and (min-width: 1024px) {
 width: 488px;
+}
+// Mobile styles
+@media screen and (max-width: 1023px) {
+
+}
 `
+
 const HeroTxtH1 = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
 font-family: 'Montserrat';
 font-weight: 900;
 font-size: 1.5em;
@@ -165,25 +164,26 @@ margin: 0 0 8px 0;
 
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
 
 }
 `
+
 const HeroTxtH2 = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
 font-family: 'Montserrat';
 font-weight: 900;
 font-size: 2.25em;
 color: #122C5C;
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
 }
 `
 const HeroTxtP = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
 font-family: 'Oxygen';
 font-weight: 300;
 font-size: 1.125em;

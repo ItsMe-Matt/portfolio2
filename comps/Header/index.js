@@ -60,9 +60,8 @@ export default function Header() {
 }
 
 const Container = styled.div`
-
 // Desktop and Tablet styles
-@media screen and (min-width: 768px){
+@media screen and (min-width: 1024px){
 display: flex;
 justify-content: space-between;
 align-items: flex-end;
@@ -70,13 +69,14 @@ align-items: flex-end;
 padding: 40px 0 12px 0;
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
 
 }
 `
 
 const HomeBtn = styled.div`
-@media screen and (min-width: 768px){
+//Desktop styles
+@media screen and (min-width: 1024px){
 font-family: Montserrat;
 font-weight: 600;
 font-size: 1.5em;
@@ -84,7 +84,7 @@ cursor: pointer;
 color: #122C5C;
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
 
 }
 `
@@ -94,7 +94,8 @@ display: flex;
 `
 
 const NavBtn1 = styled.div`
-@media screen and (min-width: 768px){
+//Desktop styles
+@media screen and (min-width: 1024px){
 font-family: Montserrat;
 font-weight: 500;
 font-size: 1em;
@@ -112,12 +113,13 @@ align-items: flex-end;
 }
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
 }
 `
 
 const NavBtn3 = styled.div`
-@media screen and (min-width: 768px){
+//Desktop styles
+@media screen and (min-width: 1024px){
 font-family: Montserrat;
 font-weight: 500;
 font-size: 1em;
@@ -127,31 +129,34 @@ background: #122C5C;
 border-radius: 8px;
 padding: 8px 32px;
 cursor: pointer;
+
 &:hover {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
     transition: 2s;
 }
+
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
 
 }
 `
+
 const IconCont = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px){
+@media screen and (min-width: 1024px){
 //display: flex;
 display: none;
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
 
 }
 `
 
 const Icon = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px){
+@media screen and (min-width: 1024px){
 margin: 0 6px;
 padding: 4px;
 box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
@@ -160,12 +165,14 @@ border-radius: 4px;
 cursor: pointer;
 display: flex;
 align-items: center;
+
 &:hover {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
     transition: 1.2s;
 }
+
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
 }
 `
