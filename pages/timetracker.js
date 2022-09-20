@@ -109,6 +109,18 @@ export default function Timetracker() {
             <ProjectP 
             description='As the designing progressed, another team member created their own version of my cards page, and after a minor user testing, we decided to progress with their design instead. After that, I decided to move on to designing components. With designing components, there was once again a hand off and evolution of ideas and designs especially when we handed the designs over to the developers. Besides the UI design of the app, I also designed the business cards for the team.'
             />
+
+            <LowFiCont>
+              <Image 
+              src="/static/Timetracker_lowFidelity.png"
+              width={1852}
+              height={920}
+              />
+            </LowFiCont>
+
+            <Caption>
+              Low Fidelity
+            </Caption>
           </SectionCont>
 
           <SectionCont id='final'>
@@ -281,5 +293,37 @@ margin: 0 0 0 0;
 // Mobile styles
 @media screen and (max-width: 767px) {
 
+}
+`
+
+const Caption = styled.div`
+// Desktop and Tablet styles
+@media screen and (min-width: 768px) {
+width: 100%;
+text-align: center;
+font-family: 'Oxygen';
+font-weight: 300;
+font-size: 1em;
+
+color: #404040;
+}
+// Mobile styles
+@media screen and (max-width: 767px) {
+
+}
+`
+
+const LowFiCont = styled.div`
+// Desktop and Tablet styles
+@media screen and (min-width: 768px) {
+width: 100%;
+overflow: hidden;
+position: relative;
+border-radius: 12px;
+filter: drop-shadow(0 0 1px #000);
+margin: 48px 0 16px 0;
+}
+// Mobile styles
+@media screen and (max-width: 767px) {
 }
 `

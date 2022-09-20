@@ -121,7 +121,7 @@ height: fit-content;
 width: 100%;
 // Desktop styles
 @media screen and (min-width: 1024px) {
-width: 1048px;
+width: 1024px;
 padding: 0 24px;
 background-color: rgba(255,255,255, 0.8);
 }
@@ -136,7 +136,7 @@ background-color: rgba(255,255,255, 0.8);
 const Content = styled.div`
 // Desktop styles
 @media screen and (min-width: 1024px) {
-width: 1048px;
+width: 1024px;
 padding: 0 24px;
 background-color: #ffffff;
 
