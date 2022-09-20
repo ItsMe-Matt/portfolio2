@@ -313,6 +313,7 @@ text-align: center;
 font-family: 'Oxygen';
 font-weight: 300;
 font-size: 1em;
+font-style: italic;
 
 color: #404040;
 }

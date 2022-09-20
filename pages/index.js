@@ -246,6 +246,7 @@ font-weight: 600;
 font-size: 1em;
 color: #ffffff;
 cursor: pointer;
+margin: 0 16px 0 0;
 
 &:hover {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
@@ -264,12 +265,40 @@ display: flex;
 justify-content: center;
 align-items: center;
 
+padding: 12px 32px;
+background: #fff;
+box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+border-radius: 52px;
+
+font-family: 'Montserrat';
+font-weight: 500;
+font-size: 1em;
+color: #122C5C;
+cursor: pointer;
+
+&:hover {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+}
+}
+// Mobile styles
+@media screen and (max-width: 1023px) {
+}
+`
+/*
+// Desktop and Tablet styles
+@media screen and (min-width: 1024px) {
+display: flex;
+justify-content: center;
+align-items: center;
+
 font-family: 'Montserrat';
 font-weight: 500;
 font-size: 1em;
 color: #122C5C;
 
 margin: 0 0 0 40px;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
 
 cursor: pointer;
 &:hover {
@@ -280,7 +309,10 @@ cursor: pointer;
 // Mobile styles
 @media screen and (max-width: 1023px) {
 }
-`
+*/
+
+
+
 
 const HeroImgCont = styled.div`
 // Desktop and Tablet styles

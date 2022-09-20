@@ -112,21 +112,45 @@ export default function Timetracker() {
 
             <LowFiCont>
               <Image 
-              src="/static/Timetracker_lowFidelity.png"
+              src="/static/Timetracker_mediumFidelity.png"
               width={1852}
               height={920}
               />
             </LowFiCont>
 
             <Caption>
-              Low Fidelity
+              Medium Fidelity
+            </Caption>
+
+            <LowFiCont>
+              <Image 
+              src="/static/Timetracker_highFidelity.png"
+              width={1852}
+              height={920}
+              />
+            </LowFiCont>
+
+            <Caption>
+              High Fidelity before user testing feedback.
+            </Caption>
+
+            <LowFiCont>
+              <Image 
+              src="/static/Timetracker_highFidelityV2.png"
+              width={1852}
+              height={920}
+              />
+            </LowFiCont>
+
+            <Caption>
+              High Fidelity after user testing feedback.
             </Caption>
           </SectionCont>
 
           <SectionCont id='final'>
             <ProjectH1P 
             title='Final Designs'
-            description='Currently the app is still being developed by our development team at Game of Apps.'
+            description='Currently the app is still being developed by our development team at Game of Apps. They are developing the app based on the high fidelity after user feedback version.'
             />
           </SectionCont>
 
@@ -175,12 +199,12 @@ flex-direction: column;
 align-items: center;
 }
 // Tablet styles
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 1024px) and (max-width: 1023px) {
 background-color: blue;
 padding: 0 16px 0 16px;
 }
 // Mobile styles
-@media screen and (max-width: 1047px) {
+@media screen and (max-width: 1023px) {
 
 }
 `
@@ -197,12 +221,12 @@ padding: 0 24px;
 background-color: rgba(255,255,255, 0.8);
 }
 // Tablet styles
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 1024px) and (max-width: 1023px) {
 background-color: blue;
 padding: 0 16px 0 16px;
 }
 // Mobile styles
-@media screen and (max-width: 1047px) {
+@media screen and (max-width: 1023px) {
 
 }
 `
@@ -220,7 +244,7 @@ flex-direction: column;
 align-items: center;
 }
 // Mobile styles
-@media screen and (max-width: 1047px) {
+@media screen and (max-width: 1023px) {
 
 }
 `
@@ -233,7 +257,7 @@ const TextContentCont = styled.div`
   margin: 88px 0 0 0;
 }
 // Mobile styles
-@media screen and (max-width: 1047px) {
+@media screen and (max-width: 1023px) {
 }
 `
 
@@ -242,7 +266,7 @@ const TextContent = styled.div`
 @media screen and (min-width: 1024px) {
 }
 // Mobile styles
-@media screen and (max-width: 1047px) {
+@media screen and (max-width: 1023px) {
 }
 `
 const SectionCont = styled.div`
@@ -251,22 +275,22 @@ const SectionCont = styled.div`
   margin: 0 0 40px 0;
 }
 // Mobile styles
-@media screen and (max-width: 1047px) {
+@media screen and (max-width: 1023px) {
 }
 `
 
 const NavCont = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px){
+@media screen and (min-width: 1024px){
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
 }
 `
 
 const CardContHeader = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
 
 font-family: 'Montserrat';
 font-weight: 600;
@@ -277,13 +301,13 @@ width: 915px;
 text-align: center;
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
 
 }
 `
 const CardCont = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
 width: 915px;
 display: flex;
 justify-content: space-between;
@@ -291,39 +315,40 @@ align-items: flex-end;
 margin: 0 0 0 0;
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
 
 }
 `
 
 const Caption = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
 width: 100%;
 text-align: center;
 font-family: 'Oxygen';
 font-weight: 300;
 font-size: 1em;
+font-style: italic;
 
 color: #404040;
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
 
 }
 `
 
 const LowFiCont = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
 width: 100%;
 overflow: hidden;
 position: relative;
 border-radius: 12px;
-filter: drop-shadow(0 0 1px #000);
+filter: drop-shadow(0 0 1px #808080);
 margin: 48px 0 16px 0;
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
 }
 `
