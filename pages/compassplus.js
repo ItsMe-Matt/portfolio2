@@ -122,6 +122,17 @@ export default function CompassPlus() {
             title='Final Designs'
             description='I am proud of the application the team was able to put together. I was also proud of the work I produced with this application. I had designed several components and one way or another, my designs had reached the final product of the app either completely intact or evolved into what is seen at the end.'
             />
+
+          <FinalImgCont>
+            <Image 
+            src="/static/CompassPlus_FinalDesign.gif"
+            width={1440}
+            height={1080}
+            />
+          </FinalImgCont>
+          <Caption>
+            This is the final design and interactions of the CompassPlus app.
+          </Caption>
           </SectionCont>
 
           <SectionCont id='conclusion' />
@@ -206,7 +217,7 @@ const Content = styled.div`
 @media screen and (min-width: 1024px) {
 width: 1024px;
 padding: 0 24px;
-margin: 0 0 40px 0;
+margin: 0 0 80px 0;
 background-color: #ffffff;
 
 display: flex;
@@ -321,4 +332,19 @@ color: #404040;
 @media screen and (max-width: 767px) {
 
 }
+`
+const FinalImgCont = styled.div`
+// Desktop and Tablet styles
+@media screen and (min-width: 768px) {
+width: 100%;
+overflow: hidden;
+position: relative;
+border-radius: 12px;
+filter: drop-shadow(0 0 1px #000);
+margin: 48px 0 16px 0;
+}
+// Mobile styles
+@media screen and (max-width: 767px) {
+}
+
 `

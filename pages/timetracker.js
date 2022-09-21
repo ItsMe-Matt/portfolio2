@@ -236,7 +236,7 @@ const Content = styled.div`
 @media screen and (min-width: 1024px) {
 width: 1024px;
 padding: 0 24px;
-margin: 0 0 40px 0;
+margin: 0 0 80px 0;
 background-color: #ffffff;
 
 display: flex;
