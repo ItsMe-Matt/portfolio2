@@ -88,7 +88,10 @@ export default function About() {
       Psh...hey! I&apos;ve got some pretty cool projects you should take a look at.
     </CardContHeader>
     <CardCont>
-        <ProjectCard />
+      <ProjectCard 
+        tagline='An organization&apos;s interal-use time tracking mobile application.'
+        route='/timetracker'
+        />
         <ProjectCard 
         tagline='An app that helps you navigate your transit service.'
         route='/compassplus'

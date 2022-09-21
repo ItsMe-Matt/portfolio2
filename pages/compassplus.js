@@ -153,7 +153,10 @@ export default function CompassPlus() {
       But wait, there&apos;s more! Take a look at my other projects or contact me with the links below.
     </CardContHeader>
     <CardCont>
-        <ProjectCard />
+        <ProjectCard 
+        tagline='An organization&apos;s interal-use time tracking mobile application.'
+        route='/timetracker'
+        />
         <ProjectCard 
         tagline='An app that helps you navigate your transit service.'
         route='/compassplus'
