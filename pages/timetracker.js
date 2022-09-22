@@ -139,6 +139,7 @@ export default function Timetracker() {
               src="/static/Timetracker_highFidelityV2.png"
               width={1852}
               height={920}
+              priority
               />
             </LowFiCont>
 
