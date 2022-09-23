@@ -49,8 +49,6 @@ export default function CompassPlus() {
       tools='Figma, Illustrator, InDesign, React, Expo'
       />
 
-
-
       <TextContentCont>
         <NavCont>
           <ProjectNav />
@@ -112,9 +110,45 @@ export default function CompassPlus() {
             title='Design Process'
             description='Taking our goal into consideration, we began the design of our low fidelity and medium-fidelity prototype. I was personally in charge of the card page. For the low fidelity, it felt really strange and clunky. I initially drew inspiration from other mobile payment apps like Apple Pay or Google Pay. However, as designs and user testing progressed, I found that users much preferred a more Starbucks-styled card page, so I based the next design on that.'
             />
+
+            <SurveyImgCont>
+              <Image
+              src="/static/CompassPlus_LowMediumFidelity.png"
+              width={2363}
+              height={1824}
+              />
+            </SurveyImgCont>
+
+            <Caption>
+              This is the low to medium fidelity designs that eventually got evolved into the high fidelity.
+            </Caption>
+
+            <SurveyImgCont>
+              <Image
+              src="/static/CompassPlus_HighFidelity.png"
+              width={2151}
+              height={1776}
+              />
+            </SurveyImgCont>
+
+            <Caption>
+              This is the final design that was given to the developers.
+            </Caption>
             <ProjectP 
-            description='As the designing progressed, another team member created their own version of my cards page, and after a vote and minor user testing, we decided to progress with their design instead. After that, I decided to move on to designing components. With designing components, there was once again a hand off and evolution of ideas and designs especially when we handed the designs over to the developers.'
+            description='As the designing progressed, another team member created their own version of my cards page, and after minor user testing, we decided to progress with their design instead. After that, I decided to move on to designing components. With designing components, there was once again a hand off and evolution of ideas and designs especially when we handed the designs over to the developers. We had also decided to have one person finalize all the designs before the developers started developing the frontend to keep the style consistent.'
             />
+
+            <SurveyImgCont>
+              <Image
+              src="/static/CompassPlus_AlternateDesigns.png"
+              width={2192}
+              height={1752}
+              />
+            </SurveyImgCont>
+
+            <Caption>
+              These were alternate unused designs that also inspired or evolved into the final designs.
+            </Caption>
           </SectionCont>
 
           <SectionCont id='final'>
@@ -141,9 +175,6 @@ export default function CompassPlus() {
             description='Our solution is to develop a cross-platform application that allows you to find your route through Translink, buy tickets, and reload them for your trip, with the added feature of checking for live Translink updates. This would allow experienced riders to continue using Translink without losing time in case they are missing their compass card or if they are going to a place they are not familiar with. This would also allow new travelers to easily learn how to navigate through Translink with one convenient application.'
             />         
         </TextContent>
-
-
-        
 
       </TextContentCont>
 
@@ -328,6 +359,7 @@ font-family: 'Oxygen';
 font-weight: 300;
 font-size: 1em;
 font-style: italic;
+margin: 0 0 40px 0;;
 
 color: #404040;
 }
