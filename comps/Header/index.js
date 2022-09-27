@@ -1,11 +1,18 @@
 import styled from "styled-components"
 import Link from 'next/link'
 import { SiMaildotru, SiLinkedin, SiGithub } from 'react-icons/si'
+import { GiHamburgerMenu } from 'react-icons/gi'
+import { AiOutlineClose } from 'react-icons/ai'
 
-export default function Header() {
+import React, { useEffect, useState } from "react";
+import ReactDOM from "react-dom";
 
 
-
+export default function Header({
+  showModal = "",
+  onClose = () => {},
+  ModalonClick = () => {}
+}) {
     return <Container>
         <Link href="/">
             <HomeBtn>
@@ -13,7 +20,15 @@ export default function Header() {
             </HomeBtn>
         </Link>
 
-       
+        <PopupBtnCont>
+            <GiHamburgerMenu size={24} onClick={ModalonClick} />
+            <Modal
+                onClose={onClose}
+                show={showModal}
+            >
+                Hello from the modal!
+            </Modal>
+        </PopupBtnCont>
 
         <NavCont>
             <Link href="/resume">
@@ -56,6 +71,8 @@ export default function Header() {
             </a>
         </IconCont>
         </NavCont>
+
+
     </Container>
 }
 
@@ -70,7 +87,11 @@ padding: 40px 0 12px 0;
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {
+display: flex;
+justify-content: space-between;
+align-items: flex-end;
 
+padding: 40px 0 12px 0;
 }
 `
 
@@ -85,12 +106,34 @@ color: #122C5C;
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {
+font-family: Montserrat;
+font-size: 1.25em;
+font-weight: 500;
+letter-spacing: 0em;
 
+color: #122C5C;
 }
 `
 
 const NavCont = styled.div`
+//Desktop styles
+@media screen and (min-width: 1024px){
 display: flex;
+}
+// Mobile styles
+@media screen and (max-width: 1023px) {
+    display: none;
+}
+`
+const PopupBtnCont = styled.div`
+//Desktop styles
+@media screen and (min-width: 1024px){
+  display: none;
+}
+// Mobile styles
+@media screen and (max-width: 1023px) {
+
+}
 `
 
 const NavBtn1 = styled.div`
@@ -177,3 +220,65 @@ align-items: center;
 @media screen and (max-width: 1023px) {
 }
 `
+
+const Modal = ({ show, onClose, children, title }) => {
+  const [isBrowser, setIsBrowser] = useState(false);
+
+  useEffect(() => {
+    setIsBrowser(true);
+  }, []);
+
+  const handleCloseClick = (e) => {
+    e.preventDefault();
+    onClose();
+  };
+
+  const modalContent = show ? (
+    <StyledModalOverlay>
+      <StyledModal>
+        <StyledModalHeader>
+          <a href="#" onClick={handleCloseClick}>
+            <AiOutlineClose size={24}/>
+          </a>
+        </StyledModalHeader>
+        Hi how are you I am Modal
+      </StyledModal>
+    </StyledModalOverlay>
+  ) : null;
+
+  if (isBrowser) {
+    return ReactDOM.createPortal(
+      modalContent,
+      document.getElementById("modal-root")
+    );
+  } else {
+    return null;
+  }
+};
+
+
+const StyledModalHeader = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  font-size: 25px;
+`;
+
+const StyledModal = styled.div`
+  background: #ffffff;
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+  z-index: 1;
+  overflow: hidden;
+`;
+const StyledModalOverlay = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+`;

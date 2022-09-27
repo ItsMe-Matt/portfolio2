@@ -9,6 +9,7 @@ import { useState } from 'react'
 
 
 export default function Home() {
+  const [showModal, setShowModal] = useState(false);
 
   var [email, setEmail] = useState(false)
   var [emailW, setEmailW] = useState("0")
@@ -32,7 +33,11 @@ export default function Home() {
 
   return <Container>
     <HeaderCont>
-      <Header />
+      <Header 
+      showModal={showModal}
+      onClose = {()=> {setShowModal(false)}}
+      ModalonClick = {()=>{setShowModal(true)}}
+      />
     </HeaderCont>
     
     <Content>
@@ -68,9 +73,12 @@ export default function Home() {
         <HeroImgCont>
           <Image 
           src="/static/MatthewZhao_ProfilePicture.png"
-          layout='fill'
+          layout='responsive'
+          width={346}
+          height={436}
           alt='A beautiful picture of Matt&apos;s beautiful face'
           priority = "true"
+          objectFit='contain'
           />
 
         </HeroImgCont>
@@ -111,22 +119,26 @@ align-items: center;
 
 // Mobile styles
 @media screen and (max-width: 1023px) {
-
+display: flex;
+flex-direction: column;
+align-items: center;
 }
 `
 
 const HeaderCont = styled.div`
 background-color: #F0F4FF;
-height: fit-content;
-width: 100%;
+
 // Desktop styles
 @media screen and (min-width: 1024px) {
 width: 1024px;
 padding: 0 24px;
 background-color: rgba(255,255,255, 0.8);
+height: fit-content;
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {
+width: 100%;
+padding: 0 16px;
 }
 `
 
@@ -142,8 +154,9 @@ flex-direction: column;
 align-items: center;
 }
 // Mobile styles
-@media screen and (max-width: 1024px) {
-
+@media screen and (max-width: 1023px) {
+padding: 0 16px;
+width: 100%;
 }
 `
 
@@ -158,6 +171,9 @@ margin: 56px 0 106px 0;
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {
+  display: flex;
+  flex-direction: column-reverse;
+
 }
 `
 
@@ -173,48 +189,65 @@ width: 488px;
 `
 
 const HeroTxtH1 = styled.div`
+color: #122C5C;
 // Desktop and Tablet styles
 @media screen and (min-width: 1024px) {
 font-family: 'Montserrat';
 font-weight: 900;
 font-size: 1.5em;
-color: #122C5C;
 margin: 0 0 8px 0;
 
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {
-
+font-family: Montserrat;
+font-size: 1.125em;
+font-weight: 700;
+margin: 0 0 8px 0;
 }
 `
 
 const HeroTxtH2 = styled.div`
+color: #122C5C;
 // Desktop and Tablet styles
 @media screen and (min-width: 1024px) {
 font-family: 'Montserrat';
 font-weight: 900;
 font-size: 2.25em;
-color: #122C5C;
+
 margin: 0 0 16px 0;
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {
+font-family: Montserrat;
+font-size: 1.5em;
+font-weight: 800;
+margin: 0 0 16px 0;
 }
 `
 
 const HeroTxtP = styled.div`
+color: #868686;
 // Desktop and Tablet styles
 @media screen and (min-width: 1024px) {
 font-family: 'Oxygen';
 font-weight: 300;
 font-size: 1.125em;
 line-height: 28px;
-color: #868686;
 
 margin: 0 0 40px 0;
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {
+font-family: 'Oxygen';
+font-weight: 300;
+font-size: 1em;
+line-height: 150%;
+
+margin: 0 0 32px 0;
+
+
+
 }
 `
 
@@ -226,6 +259,8 @@ align-items: baseline;
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {
+display: flex;
+flex-direction: column;
 }
 `
 
@@ -255,6 +290,24 @@ margin: 0 16px 0 0;
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+width: 100%;
+padding: 10px 0;
+background: #122C5C;
+box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+border-radius: 52px;
+
+font-family: 'Montserrat';
+font-weight: 600;
+font-size: 1em;
+color: #ffffff;
+cursor: pointer;
+margin: 0 0 8px 0;
+
 }
 `
 
@@ -283,33 +336,22 @@ cursor: pointer;
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {
-}
-`
-/*
-// Desktop and Tablet styles
-@media screen and (min-width: 1024px) {
 display: flex;
 justify-content: center;
 align-items: center;
+
+padding: 10px 0;
+width: 100%;
+background: #fff;
+box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+border-radius: 52px;
 
 font-family: 'Montserrat';
 font-weight: 500;
 font-size: 1em;
 color: #122C5C;
-
-margin: 0 0 0 40px;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-
-cursor: pointer;
-&:hover {
-    font-weight: 600;
-    transition: 1s;
 }
-}
-// Mobile styles
-@media screen and (max-width: 1023px) {
-}
-*/
+`
 
 
 
@@ -327,6 +369,13 @@ position: relative;
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  filter: drop-shadow(8px 8px 0px #122C5C);
+  margin: 32px 8px 48px 0;
 }
 `
 
