@@ -234,7 +234,6 @@ const Modal = ({ show, onClose, children, title }) => {
   };
 
   const modalContent = show ? (
-    <StyledModalOverlay>
       <StyledModal>
         <StyledModalHeader>
           <a href="#" onClick={handleCloseClick}>
@@ -243,7 +242,6 @@ const Modal = ({ show, onClose, children, title }) => {
         </StyledModalHeader>
         Hi how are you I am Modal
       </StyledModal>
-    </StyledModalOverlay>
   ) : null;
 
   if (isBrowser) {
@@ -270,15 +268,5 @@ const StyledModal = styled.div`
   padding: 16px;
   z-index: 1;
   overflow: hidden;
-`;
-const StyledModalOverlay = styled.div`
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.5);
 `;

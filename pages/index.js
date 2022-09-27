@@ -173,7 +173,7 @@ margin: 56px 0 106px 0;
 @media screen and (max-width: 1023px) {
   display: flex;
   flex-direction: column-reverse;
-
+  margin: 0 0 48px 0;
 }
 `
 
@@ -386,10 +386,12 @@ width: 915px;
 display: flex;
 justify-content: space-between;
 align-items: flex-end;
-margin: 0 0 0 0;
+margin: 0;
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {
-
+display: flex;
+flex-direction: column;
+padding: 0 20px;
 }
 `

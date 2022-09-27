@@ -25,7 +25,7 @@ export default function Footer({
                 </Icon>
             </a>
 
-            <Icon>
+            <EmailIcon>
                 <div onClick={()=>{onIconClick()}}>
                     <SiMaildotru size="30px" color="#fff"/>
                 </div>  
@@ -37,7 +37,7 @@ export default function Footer({
                 >
                     MatthewLukeZ@yahoo.com
                 </IconEmail>              
-            </Icon>
+            </EmailIcon>
 
         </IconCont>
        
@@ -61,8 +61,12 @@ padding: 40px 0 28px 0;
 margin: 32px 0 0 0;
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
+display: flex;
+flex-direction: column;
+align-items: center;
 
+margin: 0 0 20px 0;
 }
 `
 
@@ -73,8 +77,9 @@ display: flex;
 margin: 0 0 20px 0;
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
-
+@media screen and (max-width: 1023px) {
+display: flex;
+margin: 0 0 20px 0;
 }
 `
 
@@ -97,8 +102,17 @@ transition: 0s;
 }
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
-
+@media screen and (max-width: 1023px) {
+margin: 0 8px;
+padding: 6px 6px 4px 6px;
+box-shadow: 0px 2px 4px rgba(40, 40, 40, 0.4);
+background-color: #122C5C;
+border-radius: 4px;
+cursor: pointer;
+display: flex;
+align-items : center;
+width: fit-content;
+transition: 0s;
 }
 
 `
@@ -113,7 +127,13 @@ font-size: 1em;
 color: #868686;
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
+font-family: Oxygen;
+font-size: 12px;
+font-weight: 300;
+line-height: 15px;
+letter-spacing: 0em;
+text-align: left;
 
 }
 `
@@ -132,7 +152,40 @@ width: ${(props)=>props.emailW};
 color: #fff;
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
-
+@media screen and (max-width: 1023px) {
+display: none;
 }
+`
+const EmailIcon = styled.div`
+// Desktop and Tablet styles
+@media screen and (min-width: 1024px) {
+margin: 0 8px;
+padding: 6px 6px 4px 6px;
+box-shadow: 0px 2px 4px rgba(40, 40, 40, 0.4);
+background-color: #122C5C;
+border-radius: 4px;
+cursor: pointer;
+display: flex;
+align-items : center;
+width: fit-content;
+transition: 0s;
+&:hover {
+    box-shadow: 0px 2px 6px rgba(40, 40, 40, 0.8);
+    transition: 1s
+}
+}
+// Mobile styles
+@media screen and (max-width: 1023px) {
+margin: 0 8px;
+padding: 6px 7px 4px 7px;
+box-shadow: 0px 2px 4px rgba(40, 40, 40, 0.4);
+background-color: #122C5C;
+border-radius: 4px;
+cursor: pointer;
+display: flex;
+align-items : center;
+width: fit-content;
+transition: 0s;
+}
+
 `
