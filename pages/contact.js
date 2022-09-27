@@ -229,7 +229,7 @@ margin: 0 0 32px 0;
 
 const CardContHeader = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
 
 font-family: 'Montserrat';
 font-weight: 600;
@@ -250,7 +250,7 @@ margin: 0 0 28px 0;
 `
 const CardCont = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
 width: 915px;
 display: flex;
 justify-content: space-between;
@@ -258,7 +258,7 @@ align-items: flex-end;
 margin: 0 0 0 0;
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
 display: flex;
 flex-direction: column;
 padding: 0 20px;
