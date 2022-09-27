@@ -38,9 +38,9 @@ export default function Resume() {
       <ResumeCont>
         <Image
         src="/static/MatthewZhao_Resume.svg"
-        layout='fill'
-        objectFit='cover'
-        objectPosition="center"
+        layout='responsive'
+        width={1000}
+        height={1530}
         alt='This is my resume. I hope you like it.'
         />
         </ResumeCont>
@@ -81,7 +81,9 @@ align-items: center;
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {
-
+display: flex;
+flex-direction: column;
+align-items: center;
 }
 `
 
@@ -98,7 +100,8 @@ background-color: rgba(255,255,255, 0.8);
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {
-
+width: 100%;
+padding: 0 16px;
 }
 `
 
@@ -116,7 +119,8 @@ align-items: center;
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {
-
+padding: 0 16px;
+width: 100%;
 }
 `
 
@@ -134,7 +138,11 @@ text-align: center;
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {
-
+font-family: 'Montserrat';
+font-weight: 600;
+font-size: 1em;
+text-align: center;
+margin: 0 0 28px 0;
 }
 `
 
@@ -149,21 +157,24 @@ margin: 0 0 0 0;
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {
-
+display: flex;
+flex-direction: column;
+padding: 0 20px;
 }
 `
 
 const ResumeCont = styled.div`
 // Desktop and Tablet styles
 @media screen and (min-width: 1024px){
-width: 915px;
-height: 1184px;
-position: relative;
+width: 100%;
 
 filter: drop-shadow(0px 0px 16px rgba(0, 0, 0, 0.25));
 margin: 96px 0 64px 0;
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {
+display: flex;
+flex-direction: column;
+filter: drop-shadow(0px 0px 16px rgba(0, 0, 0, 0.25));
 }
 `

@@ -126,7 +126,7 @@ align-items: center;
 `
 
 const HeaderCont = styled.div`
-background-color: #F0F4FF;
+//background-color: #F0F4FF;
 
 // Desktop styles
 @media screen and (min-width: 1024px) {
@@ -171,9 +171,9 @@ margin: 56px 0 106px 0;
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {
-  display: flex;
-  flex-direction: column-reverse;
-  margin: 0 0 48px 0;
+display: flex;
+flex-direction: column-reverse;
+margin: 0 0 48px 0;
 }
 `
 
@@ -245,9 +245,6 @@ font-size: 1em;
 line-height: 150%;
 
 margin: 0 0 32px 0;
-
-
-
 }
 `
 

@@ -104,6 +104,6 @@ font-weight: 600;
 font-size: 1em;
 line-height: 20px;
 text-align: center;
-margin: 20px 0 0 0;
+margin: 20px 0 6px 0;
 }
 `

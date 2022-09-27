@@ -264,7 +264,7 @@ const StyledModalHeader = styled.div`
 const StyledModal = styled.div`
   background: #ffffff;
   width: 100%;
-  height: 100%;
+  height: 200%;
   padding: 16px;
   z-index: 1;
   overflow: hidden;

@@ -25,7 +25,7 @@ export default function Footer({
                 </Icon>
             </a>
 
-            <EmailIcon>
+            <Icon>
                 <div onClick={()=>{onIconClick()}}>
                     <SiMaildotru size="30px" color="#fff"/>
                 </div>  
@@ -37,9 +37,17 @@ export default function Footer({
                 >
                     MatthewLukeZ@yahoo.com
                 </IconEmail>              
-            </EmailIcon>
+            </Icon>
 
         </IconCont>
+
+        <Link href="/contact">
+            <ContactBtn>
+                Contact Me!
+            </ContactBtn>
+        </Link>
+
+
        
        <Text>
         Copyright &copy; 2022 Matthew Zhao
@@ -78,7 +86,7 @@ margin: 0 0 20px 0;
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {
-display: flex;
+display: none;
 margin: 0 0 20px 0;
 }
 `
@@ -156,36 +164,30 @@ color: #fff;
 display: none;
 }
 `
-const EmailIcon = styled.div`
+const ContactBtn = styled.div`
 // Desktop and Tablet styles
 @media screen and (min-width: 1024px) {
-margin: 0 8px;
-padding: 6px 6px 4px 6px;
-box-shadow: 0px 2px 4px rgba(40, 40, 40, 0.4);
-background-color: #122C5C;
-border-radius: 4px;
-cursor: pointer;
-display: flex;
-align-items : center;
-width: fit-content;
-transition: 0s;
-&:hover {
-    box-shadow: 0px 2px 6px rgba(40, 40, 40, 0.8);
-    transition: 1s
-}
+display: none
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {
-margin: 0 8px;
-padding: 6px 7px 4px 7px;
-box-shadow: 0px 2px 4px rgba(40, 40, 40, 0.4);
-background-color: #122C5C;
-border-radius: 4px;
-cursor: pointer;
 display: flex;
-align-items : center;
-width: fit-content;
-transition: 0s;
-}
+justify-content: center;
+align-items: center;
 
+
+width: 100%;
+padding: 10px 0;
+background: #122C5C;
+box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+border-radius: 52px;
+
+font-family: 'Montserrat';
+font-weight: 600;
+font-size: 1em;
+color: #ffffff;
+cursor: pointer;
+margin: 0 0 20px 0;
+
+}
 `
