@@ -99,7 +99,6 @@ align-items: center;
 `
 
 const HeaderCont = styled.div`
-background-color: #F0F4FF;
 height: fit-content;
 width: 100%;
 
@@ -223,6 +222,7 @@ font-size: 1em;
 line-height: 150%;
 
 margin: 0 0 32px 0;
+text-align: right;
 }
 `
 
@@ -246,6 +246,8 @@ font-weight: 600;
 font-size: 1em;
 text-align: center;
 margin: 0 0 28px 0;
+width: 100%;
+padding: 16px;
 }
 `
 const CardCont = styled.div`

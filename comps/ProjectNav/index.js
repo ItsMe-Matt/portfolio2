@@ -73,7 +73,7 @@ top: 40px;
 }
 // Mobile styles
 @media screen and (max-width: 767px) {
-
+display: none;
 }
 `
 

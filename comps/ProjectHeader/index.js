@@ -18,9 +18,9 @@ export default function ProjectHeader({
         <ImgCont>
             <Image 
             src={imgsrc}
-            layout="fill"
-            objectFit="cover"
-            objectPosition='center'
+            layout="responsive"
+            width={1080}
+            height={1440}
             quality={100}
             />
         </ImgCont>
@@ -76,7 +76,7 @@ export default function ProjectHeader({
 const Container = styled.div`
 
 // Desktop and Tablet styles
-@media screen and (min-width: 768px){
+@media screen and (min-width: 1024px){
 background-color: #ffffff;
 
 display: flex;
@@ -87,15 +87,18 @@ width: 915px;
 margin: 56px 0 0 0;
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
-
+@media screen and (max-width: 1023px) {
+display: flex;
+flex-direction: column;
+width: 100%;
+margin-bottom: 80px;
 }
 `
 
 const ImgCont = styled.div`
 position: relative;
 // Desktop and Tablet styles
-@media screen and (min-width: 768px){
+@media screen and (min-width: 1024px){
 width: 346px;
 height: 435.96px;
 border-radius: 8px;
@@ -103,13 +106,16 @@ border-radius: 8px;
 overflow: hidden;
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
+border-radius: 10px;
+overflow: hidden;
+margin: 32px 0 40px 0;
 }
 `
 
 const TxtCont = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px){
+@media screen and (min-width: 1024px){
 display: flex;
 flex-direction: column;
 align-items: flex-start;
@@ -118,13 +124,13 @@ width: 528px;
 height: 100%;
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
 }
 `
 
 const TxTHeader = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px){
+@media screen and (min-width: 1024px){
 
 font-family: Montserrat;
 font-weight: 900;
@@ -133,13 +139,19 @@ margin-bottom: 16px;
 color: #122C5C;
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
+font-family: Montserrat;
+font-size: 1.5em;
+font-weight: 800;
+line-height: 29px;
+margin: 0 0 24px 0;
+color: #122C5C;
 }
 `
 
 const TxtParagraph = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px){
+@media screen and (min-width: 1024px){
 
 font-family: Montserrat;
 font-weight: 400;
@@ -149,40 +161,64 @@ color: #575757;
 margin-bottom: 24px;
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
+font-family: Oxygen;
+font-size: 1em;
+font-weight: 400;
+line-height: 24px;
+color: #575757;
+margin: 0 0 24px 0;
+
 }
 `
 const TxtLineCont = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px){
+@media screen and (min-width: 1024px){
 display: flex;
 margin-bottom: 12px;
+}
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
+display: flex;
+margin: 0 0 8px 0;
 }
 `
 
 const TxtLineLabel = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px){
+@media screen and (min-width: 1024px){
 display: flex;
 
 font-family: Oxygen;
 font-weight: 700;
 font-size: 1.125em;
 margin-right: 8px;
-
+}
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
+font-family: Oxygen;
+font-size: 1em;
+font-weight: 700;
+line-height: 20px;
+
+margin: 0 8px 0 0;
+
 }
 `
 const TxtLineInfo = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px){
+@media screen and (min-width: 1024px){
     font-family: Oxygen;
     font-weight: 300;
     font-size: 1.125em;
+}
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
+font-family: Oxygen;
+font-size: 1em;
+font-weight: 300;
+line-height: 20px;
+letter-spacing: 0em;
+
 }
 `

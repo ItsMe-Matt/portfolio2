@@ -88,7 +88,6 @@ align-items: center;
 `
 
 const HeaderCont = styled.div`
-background-color: #F0F4FF;
 height: fit-content;
 width: 100%;
 
@@ -143,6 +142,8 @@ font-weight: 600;
 font-size: 1em;
 text-align: center;
 margin: 0 0 28px 0;
+width: 100%;
+padding: 16px;
 }
 `
 
@@ -167,9 +168,9 @@ const ResumeCont = styled.div`
 // Desktop and Tablet styles
 @media screen and (min-width: 1024px){
 width: 100%;
+padding: 0 40px;
 
 filter: drop-shadow(0px 0px 16px rgba(0, 0, 0, 0.25));
-margin: 96px 0 64px 0;
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {

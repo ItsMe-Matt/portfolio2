@@ -240,7 +240,8 @@ const Modal = ({ show, onClose, children, title }) => {
             <AiOutlineClose size={24}/>
           </a>
         </StyledModalHeader>
-        Hi how are you I am Modal
+        <LinkCont>
+        </LinkCont>
       </StyledModal>
   ) : null;
 
@@ -264,9 +265,24 @@ const StyledModalHeader = styled.div`
 const StyledModal = styled.div`
   background: #ffffff;
   width: 100%;
-  height: 200%;
+  height: 100%;
   padding: 16px;
   z-index: 1;
   overflow: hidden;
-  position: absolute;
+  position: sticky;
+  top: 0;
+  left: 0;
 `;
+
+const LinkCont = styled.div`
+// Desktop and Tablet styles
+@media screen and (min-width: 1024px) {
+display: none;
+}
+// Mobile styles
+@media screen and (max-width: 1023px) {
+background-color: red;
+height: 100%;
+width: 1000px;
+}
+`

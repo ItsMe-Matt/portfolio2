@@ -196,42 +196,33 @@ const Container = styled.div`
 height: fit-content;
 width: 100%;
 
-// Desktop styles
+// Desktop and tablet styles
 @media screen and (min-width: 1024px) {
 display: flex;
 flex-direction: column;
 align-items: center;
 }
-// Tablet styles
-@media screen and (min-width: 1024px) and (max-width: 1023px) {
-background-color: blue;
-padding: 0 16px 0 16px;
-}
 // Mobile styles
 @media screen and (max-width: 1023px) {
-
+display: flex;
+flex-direction: column;
+align-items: center;
 }
 `
 
 const HeaderCont = styled.div`
-background-color: #F0F4FF;
 height: fit-content;
 width: 100%;
-
-// Desktop styles
+// Desktop and tablet styles
 @media screen and (min-width: 1024px) {
 width: 1024px;
 padding: 0 24px;
 background-color: rgba(255,255,255, 0.8);
 }
-// Tablet styles
-@media screen and (min-width: 1024px) and (max-width: 1023px) {
-background-color: blue;
-padding: 0 16px 0 16px;
-}
 // Mobile styles
 @media screen and (max-width: 1023px) {
-
+width: 100%;
+padding: 0 16px;
 }
 `
 
@@ -249,7 +240,8 @@ align-items: center;
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {
-
+  padding: 0 16px;
+width: 100%;
 }
 `
 const TextContentCont = styled.div`
@@ -306,7 +298,13 @@ text-align: center;
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {
-
+font-family: 'Montserrat';
+font-weight: 600;
+font-size: 1em;
+text-align: center;
+margin: 0 0 28px 0;
+width: 100%;
+padding: 16px;
 }
 `
 const CardCont = styled.div`
@@ -320,8 +318,11 @@ margin: 0 0 0 0;
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {
-
+display: flex;
+flex-direction: column;
+padding: 0 20px;
 }
+
 `
 
 const Caption = styled.div`
@@ -338,7 +339,14 @@ color: #404040;
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {
+width: 100%;
+text-align: center;
+font-family: 'Oxygen';
+font-weight: 300;
+font-size: 1em;
+font-style: italic;
 
+color: #404040;
 }
 `
 

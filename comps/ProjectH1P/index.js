@@ -22,7 +22,7 @@ export default function ProjectH1P({
 const Container = styled.div`
 
 // Desktop and Tablet styles
-@media screen and (min-width: 768px){
+@media screen and (min-width: 1023px){
 display: flex;
 flex-direction: column;
 
@@ -31,27 +31,34 @@ width: 703px;
 
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
+display: flex;
+flex-direction: column;
 
+margin-bottom: 56px;
 }
 `
 const HeadText = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px){
+@media screen and (min-width: 1023px){
 font-family: 'Montserrat';
 font-weight: 700;
 font-size: 1.25em;
 margin-bottom: 24px;
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
-
+@media screen and (max-width: 1023px) {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 1.25em;
+margin: 0 0 24px 0;
 }
 `
 
 const ParagraphText = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px){
+@media screen and (min-width: 1023px){
 font-family: 'Oxygen';
 font-weight: 300;
 font-size: 1.125em;
@@ -60,7 +67,12 @@ line-height: 30px;
 color: #404040;
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
+font-family: Oxygen;
+font-size: 1em;
+font-weight: 300;
+line-height: 24px;
+
 
 }
 `
