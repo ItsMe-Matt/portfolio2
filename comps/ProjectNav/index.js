@@ -62,7 +62,7 @@ export default function ProjectNav({
 const Container = styled.div`
 
 // Desktop and Tablet styles
-@media screen and (min-width: 768px){
+@media screen and (min-width: 1024px){
 
 display: flex;
 flex-direction: column;
@@ -72,14 +72,14 @@ position: sticky;
 top: 40px;
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
 display: none;
 }
 `
 
 const Label = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px){
+@media screen and (min-width: 1024px){
 font-family: 'Montserrat';
 
 font-weight: 400;
@@ -93,7 +93,7 @@ cursor: pointer;
 }
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
 
 }
 
@@ -101,7 +101,7 @@ cursor: pointer;
 
 const LastLabel = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px){
+@media screen and (min-width: 1024px){
 font-family: 'Montserrat';
 
 font-weight: 400;
@@ -113,7 +113,7 @@ cursor: pointer;
 }
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
 
 }
 

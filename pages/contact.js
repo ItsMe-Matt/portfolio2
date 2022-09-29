@@ -110,7 +110,7 @@ background-color: rgba(255,255,255, 0.8);
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {
-  width: 100%;
+width: 100%;
 padding: 0 16px;
 }
 `
@@ -174,7 +174,6 @@ font-weight: 900;
 font-size: 1.5em;
 color: #122C5C;
 margin: 0 0 8px 0;
-
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {
@@ -230,7 +229,6 @@ text-align: right;
 const CardContHeader = styled.div`
 // Desktop and Tablet styles
 @media screen and (min-width: 1024px) {
-
 font-family: 'Montserrat';
 font-weight: 600;
 font-size: 1.25em;

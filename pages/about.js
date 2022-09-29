@@ -38,7 +38,9 @@ export default function About() {
         <HeroImgCont>
           <Image 
           src="/static/MatthewZhao_ProfilePicture.png"
-          layout='fill'
+          layout='responsive'
+          width={692}
+          height={872}
           alt='A beautiful picture of Matt&apos;s beautiful face'
           />
         </HeroImgCont>
@@ -50,7 +52,7 @@ export default function About() {
 
           <HeroTxtH2>
             I am Matthew Zhao, <br />
-            a Vancouver-based <br />
+            a Vancouver-based <LineBreak />
             UI/UX designer.
           </HeroTxtH2>
         </HeroTxtCont>
@@ -63,7 +65,9 @@ export default function About() {
       <GoaImg>
         <Image 
         src="/static/MatthewZhao_GoA.png"
-        layout="fill"
+        layout="responsive"
+        width={738}
+        height={634}
         alt='This is us wireframing an app we built in high school.'
         />
       </GoaImg>
@@ -73,7 +77,9 @@ export default function About() {
       <GundamImg>
         <Image 
         src="/static/MatthewZhao_Gundam.png"
-        layout="fill"
+        layout="responsive"
+        width={698}
+        height={912}
         alt='This is a gundam box art project I made for class.'
         />
       </GundamImg>
@@ -111,20 +117,17 @@ const Container = styled.div`
 height: fit-content;
 width: 100%;
 
-// Desktop styles
+// Desktop and tablet styles
 @media screen and (min-width: 1024px) {
 display: flex;
 flex-direction: column;
 align-items: center;
 }
-// Tablet styles
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-background-color: blue;
-padding: 0 16px 0 16px;
-}
 // Mobile styles
-@media screen and (max-width: 1047px) {
-
+@media screen and (max-width: 1023px) {
+display: flex;
+flex-direction: column;
+align-items: center;
 }
 `
 
@@ -133,20 +136,16 @@ background-color: #F0F4FF;
 height: fit-content;
 width: 100%;
 
-// Desktop styles
+// Desktop and tablet styles
 @media screen and (min-width: 1024px) {
 width: 1024px;
 padding: 0 24px;
 background-color: rgba(255,255,255, 0.8);
 }
-// Tablet styles
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-background-color: blue;
-padding: 0 16px 0 16px;
-}
 // Mobile styles
-@media screen and (max-width: 1047px) {
-
+@media screen and (max-width: 1023px) {
+width: 100%;
+padding: 0 16px;
 }
 `
 
@@ -163,15 +162,17 @@ flex-direction: column;
 align-items: center;
 }
 // Mobile styles
-@media screen and (max-width: 1047px) {
-
+@media screen and (max-width: 1023px) {
+padding: 0 16px;
+width: 100%;
+margin: 0 0 80px 0;
 }
 `
 
 
 const CardContHeader = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
 
 font-family: 'Montserrat';
 font-weight: 600;
@@ -182,13 +183,19 @@ width: 915px;
 text-align: center;
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
-
+@media screen and (max-width: 1023px) {
+font-family: 'Montserrat';
+font-weight: 600;
+font-size: 1em;
+text-align: center;
+margin: 0 0 28px 0;
+width: 100%;
+padding: 16px;
 }
 `
 const HeroCont = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
 width: 915px;
 display: flex;
 justify-content: space-between;
@@ -196,44 +203,63 @@ align-items: flex-end;
 margin: 56px 0 106px 0;
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
+display: flex;
+flex-direction: column;
+margin: 0 0 48px 0;
+width: 100%
 
 }
 `
 const HeroTxtCont = styled.div`
+// Desktop and Tablet styles
+@media screen and (min-width: 1024px) {
 width: 488px;
+}
+// Mobile styles
+@media screen and (max-width: 1023px) {
+margin: 56px 0 0 0;
+}
 `
 const HeroTxtH1 = styled.div`
+color: #122C5C;
 // Desktop and Tablet styles
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
 font-family: 'Montserrat';
 font-weight: 900;
 font-size: 1.5em;
-color: #122C5C;
 margin: 0 0 8px 0;
 
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
-
+@media screen and (max-width: 1023px) {
+font-family: Montserrat;
+font-size: 1.125em;
+font-weight: 700;
+margin: 0 0 8px 0;
 }
 `
 const HeroTxtH2 = styled.div`
+color: #122C5C;
 // Desktop and Tablet styles
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
 font-family: 'Montserrat';
 font-weight: 900;
 font-size: 2.25em;
 color: #122C5C;
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
+font-family: Montserrat;
+font-size: 1.5em;
+font-weight: 800;
+margin: 0 0 16px 0;
 }
 `
 
 const HeroImgCont = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
 width: 346px;
 height: 436px;
 border-radius: 12px;
@@ -242,13 +268,20 @@ margin: 0 12px 0 0;
 overflow: hidden;
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  filter: drop-shadow(8px 8px 0px #122C5C);
+  margin: 32px 8px 0 0;
 }
 `
 
 const CardCont = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
 width: 915px;
 display: flex;
 justify-content: space-between;
@@ -256,12 +289,15 @@ align-items: flex-end;
 margin: 0 0 0 0;
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
+display: flex;
+flex-direction: column;
+padding: 0 20px;
 }
 `
 const ContentBlock = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
 width: 915px;
 display: flex;
 justify-content: space-between;
@@ -270,13 +306,16 @@ padding: 0 12px 12px 12px;
 margin: 0px 0 56px 0;
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
+display: flex;
+flex-direction: column-reverse;
+width: 100%;
 }
 `
 
 const ContentP = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
 font-family: 'Oxygen';
 font-weight: 400;
 font-size: 1.25em;
@@ -286,13 +325,20 @@ color: #868686;
 width: ${props=>props.pwidth};
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
+font-family: 'Oxygen';
+font-weight: 300;
+font-size: 1em;
+line-height: 150%;
+
+margin: 0 0 32px 0;
+color: #868686;
 }
 `
 
 const GoaImg = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
 width: 369px;
 height: 316.71px;
 
@@ -301,13 +347,17 @@ border-radius: 12px;
 overflow: hidden;
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
+border-radius: 12px;
+overflow: hidden;
+margin: 0 0 32px 0;
+filter: drop-shadow(0 0 2px #808080);
 }
 `
 
 const GundamImg = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
 width: 349px;
 height: 456px;
 
@@ -316,6 +366,19 @@ border-radius: 12px;
 overflow: hidden;
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
+border-radius: 12px;
+overflow: hidden;
+filter: drop-shadow(0 0 2px #808080);
+}
+`
+
+const LineBreak = styled.br`
+// Desktop and Tablet styles
+@media screen and (min-width: 1024px) {
+}
+// Mobile styles
+@media screen and (max-width: 1023px) {
+display: none
 }
 `
