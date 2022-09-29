@@ -23,6 +23,7 @@ width: 703px;
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {
+    margin-bottom: 56px;
 }
 `
 const ParagraphText = styled.div`
@@ -41,6 +42,8 @@ font-family: Oxygen;
 font-size: 1em;
 font-weight: 300;
 line-height: 24px;
+
+color: #404040;
 }
 `
 

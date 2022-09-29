@@ -78,17 +78,17 @@ export default function CompassPlus() {
             RPoint3='To manage everything transit-related in one convenient app.'
             />
 
-            <SurveyImgCont>
+            <ImgCont>
               <Image
               src="/static/CompassPlus_Survey.gif"
               width={989}
               height={735}
               />
-            </SurveyImgCont>
+            </ImgCont>
 
-            <Caption>
+            <CaptionBottom>
               These were some of the questions and results of our preliminary survey.
-            </Caption>
+            </CaptionBottom>
           </SectionCont>
 
           <SectionCont id='problem'>
@@ -111,44 +111,44 @@ export default function CompassPlus() {
             description='Taking our goal into consideration, we began the design of our low fidelity and medium-fidelity prototype. I was personally in charge of the card page. For the low fidelity, it felt really strange and clunky. I initially drew inspiration from other mobile payment apps like Apple Pay or Google Pay. However, as designs and user testing progressed, I found that users much preferred a more Starbucks-styled card page, so I based the next design on that.'
             />
 
-            <SurveyImgCont>
+            <ImgCont>
               <Image
               src="/static/CompassPlus_LowMediumFidelity.png"
               width={2363}
               height={1824}
               />
-            </SurveyImgCont>
+            </ImgCont>
 
             <Caption>
               This is the low to medium fidelity designs that eventually got evolved into the high fidelity.
             </Caption>
 
-            <SurveyImgCont>
+            <ImgCont>
               <Image
               src="/static/CompassPlus_HighFidelity.png"
               width={2151}
               height={1776}
               />
-            </SurveyImgCont>
+            </ImgCont>
 
-            <Caption>
+            <CaptionBottom>
               This is the final design that was given to the developers.
-            </Caption>
+            </CaptionBottom>
             <ProjectP 
             description='As the designing progressed, another team member created their own version of my cards page, and after minor user testing, we decided to progress with their design instead. After that, I decided to move on to designing components. With designing components, there was once again a hand off and evolution of ideas and designs especially when we handed the designs over to the developers. We had also decided to have one person finalize all the designs before the developers started developing the frontend to keep the style consistent.'
             />
 
-            <SurveyImgCont>
+            <ImgCont>
               <Image
               src="/static/CompassPlus_AlternateDesigns.png"
               width={2192}
               height={1752}
               />
-            </SurveyImgCont>
+            </ImgCont>
 
-            <Caption>
+            <CaptionBottom>
               These were alternate unused designs that also inspired or evolved into the final designs.
-            </Caption>
+            </CaptionBottom>
           </SectionCont>
 
           <SectionCont id='final'>
@@ -157,16 +157,16 @@ export default function CompassPlus() {
             description='I am proud of the application the team was able to put together. I was also proud of the work I produced with this application. I had designed several components and one way or another, my designs had reached the final product of the app either completely intact or evolved into what is seen at the end.'
             />
 
-          <FinalImgCont>
+          <ImgCont>
             <Image 
             src="/static/CompassPlus_FinalDesign.gif"
             width={1440}
             height={1080}
             />
-          </FinalImgCont>
-          <Caption>
+          </ImgCont>
+          <CaptionBottom>
             This is the final design and interactions of the CompassPlus app.
-          </Caption>
+          </CaptionBottom>
           </SectionCont>
 
           <SectionCont id='conclusion' />
@@ -207,20 +207,17 @@ const Container = styled.div`
 height: fit-content;
 width: 100%;
 
-// Desktop styles
+// Desktop and Tablet styles
 @media screen and (min-width: 1024px) {
 display: flex;
 flex-direction: column;
 align-items: center;
 }
-// Tablet styles
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-background-color: blue;
-padding: 0 16px 0 16px;
-}
 // Mobile styles
-@media screen and (max-width: 1047px) {
-
+@media screen and (max-width: 1023px) {
+display: flex;
+flex-direction: column;
+align-items: center;
 }
 `
 
@@ -235,14 +232,10 @@ width: 1024px;
 padding: 0 24px;
 background-color: rgba(255,255,255, 0.8);
 }
-// Tablet styles
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-background-color: blue;
-padding: 0 16px 0 16px;
-}
 // Mobile styles
-@media screen and (max-width: 1047px) {
-
+@media screen and (max-width: 1023px) {
+width: 100%;
+padding: 0 16px;
 }
 `
 
@@ -259,8 +252,9 @@ flex-direction: column;
 align-items: center;
 }
 // Mobile styles
-@media screen and (max-width: 1047px) {
-
+@media screen and (max-width: 1023px) {
+padding: 0 16px;
+width: 100%;
 }
 `
 const TextContentCont = styled.div`
@@ -272,7 +266,7 @@ const TextContentCont = styled.div`
   margin: 88px 0 0 0;
 }
 // Mobile styles
-@media screen and (max-width: 1047px) {
+@media screen and (max-width: 1023px) {
 }
 `
 
@@ -281,7 +275,7 @@ const TextContent = styled.div`
 @media screen and (min-width: 1024px) {
 }
 // Mobile styles
-@media screen and (max-width: 1047px) {
+@media screen and (max-width: 1023px) {
 }
 `
 const SectionCont = styled.div`
@@ -290,37 +284,24 @@ const SectionCont = styled.div`
   margin: 0 0 40px 0;
 }
 // Mobile styles
-@media screen and (max-width: 1047px) {
+@media screen and (max-width: 1023px) {
 }
 `
 
-const SurveyImgCont = styled.div`
-// Desktop and Tablet styles
-@media screen and (min-width: 768px) {
-width: 100%;
-overflow: hidden;
-position: relative;
-border-radius: 12px;
-filter: drop-shadow(0 0 1px #000);
-margin: 48px 0 16px 0;
-}
-// Mobile styles
-@media screen and (max-width: 767px) {
-}
-`
+
 
 const NavCont = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px){
+@media screen and (min-width: 1024px){
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
 }
 `
 
 const CardContHeader = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
 
 font-family: 'Montserrat';
 font-weight: 600;
@@ -331,13 +312,19 @@ width: 915px;
 text-align: center;
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
-
+@media screen and (max-width: 1023px) {
+  font-family: 'Montserrat';
+font-weight: 600;
+font-size: 1em;
+text-align: center;
+margin: 0 0 28px 0;
+width: 100%;
+padding: 16px;
 }
 `
 const CardCont = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
 width: 915px;
 display: flex;
 justify-content: space-between;
@@ -345,14 +332,16 @@ align-items: flex-end;
 margin: 0 0 0 0;
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
-
+@media screen and (max-width: 1023px) {
+  display: flex;
+flex-direction: column;
+padding: 0 20px;
 }
 `
 
 const Caption = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
 width: 100%;
 text-align: center;
 font-family: 'Oxygen';
@@ -364,13 +353,21 @@ margin: 0 0 40px 0;;
 color: #404040;
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
+width: 100%;
+text-align: center;
+font-family: 'Oxygen';
+font-weight: 300;
+font-size: 1em;
+font-style: italic;
 
+color: #404040;
 }
 `
-const FinalImgCont = styled.div`
+
+const ImgCont = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
 width: 100%;
 overflow: hidden;
 position: relative;
@@ -379,7 +376,33 @@ filter: drop-shadow(0 0 1px #000);
 margin: 48px 0 16px 0;
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
+  filter: drop-shadow(0 0 1px #808080);
+  margin: 48px 0 16px 0;
 }
-
 `
+
+const CaptionBottom = styled.div`
+// Desktop and Tablet styles
+@media screen and (min-width: 1024px) {
+width: 100%;
+text-align: center;
+font-family: 'Oxygen';
+font-weight: 300;
+font-size: 1em;
+font-style: italic;
+
+color: #404040;
+}
+// Mobile styles
+@media screen and (max-width: 1023px) {
+width: 100%;
+text-align: center;
+font-family: 'Oxygen';
+font-weight: 300;
+font-size: 1em;
+font-style: italic;
+
+color: #404040;
+margin-bottom: 56px;
+}`

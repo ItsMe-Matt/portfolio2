@@ -143,9 +143,9 @@ export default function Timetracker() {
               />
             </LowFiCont>
 
-            <Caption>
+            <CaptionBottom>
               High Fidelity after user testing feedback.
-            </Caption>
+            </CaptionBottom>
           </SectionCont>
 
           <SectionCont id='final'>
@@ -247,10 +247,10 @@ width: 100%;
 const TextContentCont = styled.div`
 // Desktop and Tablet styles
 @media screen and (min-width: 1024px) {
-  display: flex;
-  width: 915px;
-  justify-content: space-between;
-  margin: 88px 0 0 0;
+display: flex;
+width: 915px;
+justify-content: space-between;
+margin: 88px 0 0 0;
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {
@@ -340,6 +340,31 @@ font-size: 1em;
 font-style: italic;
 
 color: #404040;
+}`
+
+const CaptionBottom = styled.div`
+// Desktop and Tablet styles
+@media screen and (min-width: 1024px) {
+width: 100%;
+text-align: center;
+font-family: 'Oxygen';
+font-weight: 300;
+font-size: 1em;
+font-style: italic;
+
+color: #404040;
+}
+// Mobile styles
+@media screen and (max-width: 1023px) {
+width: 100%;
+text-align: center;
+font-family: 'Oxygen';
+font-weight: 300;
+font-size: 1em;
+font-style: italic;
+
+color: #404040;
+margin-bottom: 56px;
 }`
 
 const LowFiCont = styled.div`

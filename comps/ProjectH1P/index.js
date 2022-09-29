@@ -73,7 +73,7 @@ font-size: 1em;
 font-weight: 300;
 line-height: 24px;
 
-
+color: #404040;
 }
 `
 
