@@ -62,7 +62,7 @@ export default function ProjectList({
 
 const Container = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px){
+@media screen and (min-width: 1023px){
 display: flex;
 justify-content: space-between;
 width: 703px;
@@ -70,53 +70,57 @@ width: 703px;
 margin: 32px 0;
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
 
 }
 `
 const HalfCont = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px){
+@media screen and (min-width: 1023px){
 display: flex;
 flex-direction: column;
 align-items: center;
 width: 46%;
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
 }
 `
 
 const HeadText = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px){
+@media screen and (min-width: 1023px){
 font-family: 'Montserrat';
 font-weight: 500;
 font-size: 1.25em;
 margin-bottom: 24px;
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
+font-family: Oxygen;
+font-size: 1.125em;
+font-weight: 300;
+line-height: 24px;
 }
 `
 
 const List = styled.ul`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px){
-list-style-type: circle;
+@media screen and (min-width: 1023px){
+list-style-type: disc;
 list-style-position: inside;
 margin: 0;
 padding: 0;
 width: 100%;
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
 
 }
 `
 const ListContent = styled.li`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px){
+@media screen and (min-width: 1023px){
 font-family: 'Oxygen';
 font-weight: 300;
 font-size: 1.125em;
@@ -124,6 +128,10 @@ line-height: 175%;
 color: #404040;
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
+font-family: Oxygen;
+font-size: 1em;
+font-weight: 300;
+line-height: 24px;
 }
 `

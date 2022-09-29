@@ -16,18 +16,18 @@ export default function ProjectP({
 
 const Container = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px){
+@media screen and (min-width: 1024px){
 display: flex;
 flex-direction: column;
 width: 703px;
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
 }
 `
 const ParagraphText = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 768px){
+@media screen and (min-width: 1024px){
 font-family: 'Oxygen';
 font-weight: 300;
 font-size: 1.125em;
@@ -36,8 +36,11 @@ line-height: 30px;
 color: #404040;
 }
 // Mobile styles
-@media screen and (max-width: 767px) {
-
+@media screen and (max-width: 1023px) {
+font-family: Oxygen;
+font-size: 1em;
+font-weight: 300;
+line-height: 24px;
 }
 `
 

@@ -276,12 +276,6 @@ const SectionCont = styled.div`
 `
 
 const NavCont = styled.div`
-// Desktop and Tablet styles
-@media screen and (min-width: 1024px){
-}
-// Mobile styles
-@media screen and (max-width: 1023px) {
-}
 `
 
 const CardContHeader = styled.div`
@@ -307,6 +301,7 @@ width: 100%;
 padding: 16px;
 }
 `
+
 const CardCont = styled.div`
 // Desktop and Tablet styles
 @media screen and (min-width: 1024px) {
@@ -321,9 +316,7 @@ margin: 0 0 0 0;
 display: flex;
 flex-direction: column;
 padding: 0 20px;
-}
-
-`
+}`
 
 const Caption = styled.div`
 // Desktop and Tablet styles
@@ -347,8 +340,7 @@ font-size: 1em;
 font-style: italic;
 
 color: #404040;
-}
-`
+}`
 
 const LowFiCont = styled.div`
 // Desktop and Tablet styles
@@ -362,5 +354,6 @@ margin: 48px 0 16px 0;
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {
-}
-`
+  filter: drop-shadow(0 0 1px #808080);
+  margin: 48px 0 16px 0;
+}`
