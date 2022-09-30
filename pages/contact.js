@@ -10,7 +10,17 @@ import Footer from '@/comps/Footer'
 
 
 export default function Contact() {
-  const [showMenu, setShowMenu] = useState(false);
+  var [showMenu, setShowMenu] = useState(false);
+  var [contH, setContH] = useState("100%")
+
+  useEffect(()=>{
+    if (showMenu == false) {
+      setContH("100%")
+    }
+    if (showMenu == true) {
+      setContH("100vh")
+    }
+  })
 
   var [email, setEmail] = useState(false)
   var [emailW, setEmailW] = useState("42px")
@@ -30,7 +40,11 @@ export default function Contact() {
 
   return <Container>
     <HeaderCont>
-      <Header />
+      <Header
+      showModal={showMenu}
+      onClose = {()=> {setShowMenu(false); console.log(showMenu)}}
+      onMenuClick = {()=>{setShowMenu(true); console.log(showMenu)}}
+      />
     </HeaderCont>
     
     <Content>
