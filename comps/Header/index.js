@@ -267,5 +267,6 @@ display: none;
     align-items: flex-start;
 
     padding: 16px 0 24px 0;
+    box-shadow: inset 0 7px 3 -3 rgba(50,50,50,0.75);
 }
 `

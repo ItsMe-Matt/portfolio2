@@ -1,10 +1,12 @@
 import styled from 'styled-components'
 import Image from 'next/image'
 import { useState } from 'react'
+import { SiMaildotru, SiLinkedin, SiGithub } from 'react-icons/si'
 
 import Header from '@/comps/Header'
 import ProjectCard from '@/comps/ProjectCard'
 import Footer from '@/comps/Footer'
+
 
 
 export default function Contact() {
@@ -53,6 +55,34 @@ export default function Contact() {
             email: <a href="mailto:matthewlukez@yahoo.com">matthewlukez@yahoo.com</a>
         </HeroTxtP>
 
+        <ButtonCont>
+          <a href='https://www.linkedin.com/in/mlzhao'>
+            <BtnCont>
+              /in/mlzhao
+              <IconCont>
+                <SiLinkedin size="32px" color="#fff"/>
+              </IconCont>
+            </BtnCont>
+          </a>
+
+          <a href='https://github.com/ItsMe-Matt'>
+            <BtnCont>
+              /itsme-matt
+              <IconCont>
+                <SiGithub size="32px" color="#fff"/>
+              </IconCont>
+            </BtnCont>
+          </a>
+
+          
+            <BtnCont onClick={()=>{navigator.clipboard.writeText("matthewlukez@yahoo.com")}}>
+              matthewlukez@yahoo.com
+              <IconCont>
+                <SiMaildotru size="32px" color="#fff"/>
+              </IconCont>
+            </BtnCont>
+
+        </ButtonCont>
       </HeroCont>
     </Content>
     <CardContHeader>
@@ -219,6 +249,7 @@ line-height: 150%;
 
 margin: 0 0 32px 0;
 text-align: right;
+display: none;
 }
 `
 
@@ -259,5 +290,78 @@ margin: 0 0 0 0;
 display: flex;
 flex-direction: column;
 padding: 0 20px;
+}
+`
+
+const ButtonCont = styled.div`
+// Desktop and Tablet styles
+@media screen and (min-width: 1024px) {
+display: none
+}
+// Mobile styles
+@media screen and (max-width: 1023px) {
+display: flex;
+flex-direction: column;
+margin: 32px 0 0 0;
+}
+`
+
+const BtnCont = styled.div`
+// Desktop and Tablet styles
+@media screen and (min-width: 1024px) {
+display: flex;
+justify-content: center;
+align-items: center;
+
+padding: 12px 32px;
+background: #122C5C;
+box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+border-radius: 52px;
+
+font-family: 'Montserrat';
+font-weight: 600;
+font-size: 1em;
+color: #ffffff;
+cursor: pointer;
+margin: 0 16px 0 0;
+
+&:hover {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+}
+}
+// Mobile styles
+@media screen and (max-width: 1023px) {
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+width: 100%;
+padding: 20px 0;
+background: #122C5C;
+box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+border-radius: 52px;
+
+font-family: 'Montserrat';
+font-weight: 600;
+font-size: 1em;
+color: #ffffff;
+cursor: pointer;
+margin: 0 0 8px 0;
+
+}
+`
+
+const IconCont = styled.div`
+
+// Desktop and Tablet styles
+@media screen and (min-width: 1024px) {
+
+}
+// Mobile styles
+@media screen and (max-width: 1023px) {
+position: absolute;
+left: 40px;
 }
 `
