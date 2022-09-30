@@ -5,26 +5,21 @@ import Link from 'next/link'
 import Header from '@/comps/Header'
 import ProjectCard from '@/comps/ProjectCard'
 import Footer from '@/comps/Footer'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 
 export default function Home() {
   var [showMenu, setShowMenu] = useState(false);
-  var [menuD, setMenuD] = useState("none")
+  var [contH, setContH] = useState("100%")
 
-  function menuClick() {
+  useEffect(()=>{
     if (showMenu == false) {
-      setMenuD("flex")
-      console.log(showMenu)
-      setShowMenu(true)
+      setContH("100%")
     }
     if (showMenu == true) {
-      setMenuD("none")
-      console.log(showMenu)
-      setShowMenu(false)
-
+      setContH("100vh")
     }
-  }
+  })
 
   var [email, setEmail] = useState(false)
   var [emailW, setEmailW] = useState("42px")
@@ -42,11 +37,13 @@ export default function Home() {
     }
   }
 
-  return <Container>
+  return <Container
+  height={contH}>
     <HeaderCont>
       <Header
-      onMenuClick={menuClick}
-      menuDisplay={menuD}
+      showModal={showMenu}
+      onClose = {()=> {setShowMenu(false); console.log(showMenu)}}
+      onMenuClick = {()=>{setShowMenu(true); console.log(showMenu)}}
       />
     </HeaderCont>
     
@@ -116,7 +113,6 @@ export default function Home() {
 }
 
 const Container = styled.div`
-height: fit-content;
 width: 100%;
 
 // Desktop styles
@@ -131,6 +127,9 @@ align-items: center;
 display: flex;
 flex-direction: column;
 align-items: center;
+overflow: hidden;
+
+height: ${(props)=>props.height}
 }
 `
 

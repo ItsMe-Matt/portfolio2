@@ -10,7 +10,8 @@ import ReactDOM from "react-dom";
 
 export default function Header({
   onMenuClick = () => {},
-  menuDisplay = "none"
+  showModal = "",
+  onClose = () => {},
 }) {
     return <div>
     <Container>
@@ -20,8 +21,15 @@ export default function Header({
             </HomeBtn>
         </Link>
 
-        <MenuBtnCont onClick={()=>{onMenuClick()}}>
-            <GiHamburgerMenu size={24}/>
+        <MenuBtnCont >
+            <GiHamburgerMenu size={24} onClick={onMenuClick}/>
+
+            <Modal
+                onClose={onClose}
+                show={showModal}
+            >
+                Hello from the modal!
+            </Modal>
         </MenuBtnCont>
 
         <NavCont>
@@ -67,36 +75,71 @@ export default function Header({
         </NavCont>
     </Container>
 
-    <MenuCont
-    menuDisplay={menuDisplay}>
-        <Link href="/">
-            <NavBtn1>
-                Home
-            </NavBtn1>
-        </Link>
 
-        <Link href="/resume">
-            <NavBtn1>
-                Resume
-            </NavBtn1>
-        </Link>
-        
-        <Link href="/about">
-            <NavBtn1>
-                About Me
-            </NavBtn1>
-        </Link>
-
-        <Link href="/contact">
-            <NavBtn3>
-                Contact Me
-            </NavBtn3>
-        </Link>
-    </MenuCont>
 
     </div>
 }
 
+const Modal = ({ show, onClose, children, title }) => {
+    const [isBrowser, setIsBrowser] = useState(false);
+  
+    useEffect(() => {
+      setIsBrowser(true);
+    }, []);
+  
+    const handleCloseClick = (e) => {
+      e.preventDefault();
+      onClose();
+    };
+  
+    const modalContent = show ? (
+        <StyledModal>
+            <StyledModalHeader>
+                <a href="#" onClick={handleCloseClick}>
+                  <AiOutlineClose size={24}/>
+                </a>
+            </StyledModalHeader>
+
+            <MenuCont>
+                <Link href="/">
+                    <NavBtn1>
+                        Home
+                    </NavBtn1>
+                </Link>
+
+                <Link href="/resume">
+                    <NavBtn1>
+                        Resume
+                    </NavBtn1>
+                </Link>
+
+                <Link href="/about">
+                    <NavBtn1>
+                        About Me
+                    </NavBtn1>
+                </Link>
+
+
+            </MenuCont>
+           
+            <Link href="/contact">
+                <NavBtn3>
+                    Contact Me
+                </NavBtn3>
+            </Link>
+        </StyledModal>
+    ) : null;
+  
+    if (isBrowser) {
+      return ReactDOM.createPortal(
+        modalContent,
+        document.getElementById("modal-root")
+      );
+    } else {
+      return null;
+    }
+  };
+  
 const Container = styled.div`
 
 // Desktop and Tablet styles
@@ -179,14 +222,13 @@ align-items: flex-end;
 // Mobile styles
 @media screen and (max-width: 1023px) {
 font-family: Montserrat;
-font-size: 1.25em;
+font-size: 1.75em;
 font-weight: 500;
-text-align: left;
+text-align: center;
 
 width: 100%;
 padding: 0 0 0 16px;
-margin: 0 0 16px 0;
-border-bottom: 1px solid #404040;
+margin: 0 0 24px 0;
 }
 `
 
@@ -210,12 +252,23 @@ cursor: pointer;
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {
-font-family: Montserrat;
-font-size: 1.5em;
-font-weight: 500;
-text-align: center;
+display: flex;
+justify-content: center;
+align-items: center;
+
 
 width: 100%;
+padding: 16px 0;
+background: #122C5C;
+box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+border-radius: 52px;
+
+font-family: 'Montserrat';
+font-weight: 600;
+font-size: 1.25em;
+color: #ffffff;
+cursor: pointer;
+margin: 0 0 20px 0;
 }
 `
 
@@ -259,14 +312,26 @@ display: none;
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {
-    width: 100%;
-    overflow: hidden;
 
-    display: ${(props)=>props.menuDisplay};
-    flex-direction: column;
-    align-items: flex-start;
-
-    padding: 16px 0 24px 0;
-    box-shadow: inset 0 7px 3 -3 rgba(50,50,50,0.75);
 }
 `
+  
+const StyledModalHeader = styled.div`
+width: 100%;
+display: flex;
+justify-content: flex-end;
+`;
+  
+const StyledModal = styled.div`
+background: #ffffff;
+width: 100%;
+height: 100%;
+padding: 16px;
+z-index: 1;
+overflow: hidden;
+position: absolute;
+
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+`;
