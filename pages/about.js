@@ -8,23 +8,21 @@ import Footer from '@/comps/Footer'
 
 
 export default function About() {
+  const [showMenu, setShowMenu] = useState(false);
 
   var [email, setEmail] = useState(false)
-  var [emailW, setEmailW] = useState("0")
-  var [emailM, setEmailM] = useState("0")
+  var [emailW, setEmailW] = useState("42px")
 
   function emailIconClick(){
-    if (email === true) {
-      setEmail(false)
+    if (email == false) {
       setEmailW("100%")
-      setEmailM("0 8px")
-      
-    }
-    if (email === false) {
-      setEmailM("0")
-      setEmailW("0")
-
       setEmail(true)
+      console.log(email)
+    }
+    if (email == true) {
+      setEmail(false)
+      setEmailW("42px")
+      console.log(email)
     }
   }
 
@@ -62,32 +60,44 @@ export default function About() {
       <ContentP pwidth={"402px"}>
       I grew up in the Greater Vancouver Area and grew my passion for UI/UX design in high school through the Game of Apps program. After graduation, I went to BCIT to continue to sharpen and build up my skills.
       </ContentP>
-      <GoaImg>
-        <Image 
-        src="/static/MatthewZhao_GoA.png"
-        layout="responsive"
-        width={738}
-        height={634}
-        alt='This is us wireframing an app we built in high school.'
-        />
-      </GoaImg>
+      <div>
+        <GoaImg>
+          <Image 
+          src="/static/MatthewZhao_GoA.png"
+          layout="responsive"
+          width={738}
+          height={634}
+          alt='This is us wireframing an app we built in high school.'
+          />
+        </GoaImg>
+        <Caption>
+          Mockups for my first app with Game of Apps.
+        </Caption>
+      </div>
+      
     </ContentBlock>
 
-    <ContentBlock>
-      <GundamImg>
-        <Image 
-        src="/static/MatthewZhao_Gundam.png"
-        layout="responsive"
-        width={698}
-        height={912}
-        alt='This is a gundam box art project I made for class.'
-        />
-      </GundamImg>
+    <ContentBlock2>
+      <div>
+        <GundamImg>
+          <Image 
+          src="/static/MatthewZhao_Gundam.png"
+          layout="responsive"
+          width={698}
+          height={912}
+          alt='This is a gundam box art project I made for class.'
+          />
+        </GundamImg>
+        <Caption>
+          This is a box art of a gundam I have at home.
+        </Caption>
+      </div>
+
       <ContentP pwidth={"425px"}>
       Outside of school and work, I enjoy building plastic models and eating out with friends. I enjoy the occasional hike and day of exploring the city. I also have experience in graphic design and enjoy helping in video editing in my communities. 
       </ContentP>
 
-    </ContentBlock>
+    </ContentBlock2>
 
     </Content>
     <CardContHeader>
@@ -107,7 +117,6 @@ export default function About() {
     <Footer 
     onIconClick={emailIconClick}
     emailWidth={emailW}
-    emailMargin={emailM}
     />
 
   </Container>
@@ -206,7 +215,7 @@ margin: 56px 0 106px 0;
 @media screen and (max-width: 1023px) {
 display: flex;
 flex-direction: column;
-margin: 0 0 48px 0;
+margin: 0 0 24px 0;
 width: 100%
 
 }
@@ -253,7 +262,6 @@ color: #122C5C;
 font-family: Montserrat;
 font-size: 1.5em;
 font-weight: 800;
-margin: 0 0 16px 0;
 }
 `
 
@@ -308,6 +316,24 @@ margin: 0px 0 56px 0;
 // Mobile styles
 @media screen and (max-width: 1023px) {
 display: flex;
+flex-direction: column;
+width: 100%;
+}
+`
+
+const ContentBlock2 = styled.div`
+// Desktop and Tablet styles
+@media screen and (min-width: 1024px) {
+width: 915px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 12px 12px 12px;
+margin: 0px 0 56px 0;
+}
+// Mobile styles
+@media screen and (max-width: 1023px) {
+display: flex;
 flex-direction: column-reverse;
 width: 100%;
 }
@@ -350,7 +376,6 @@ overflow: hidden;
 @media screen and (max-width: 1023px) {
 border-radius: 12px;
 overflow: hidden;
-margin: 0 0 32px 0;
 filter: drop-shadow(0 0 2px #808080);
 }
 `
@@ -380,5 +405,25 @@ const LineBreak = styled.br`
 // Mobile styles
 @media screen and (max-width: 1023px) {
 display: none
+}
+`
+
+const Caption = styled.div`
+// Desktop and Tablet styles
+@media screen and (min-width: 1024px) {
+display: none;
+}
+// Mobile styles
+@media screen and (max-width: 1023px) {
+width: 100%;
+text-align: center;
+font-family: 'Oxygen';
+font-weight: 300;
+font-size: 1em;
+font-style: italic;
+
+color: #6B6B6B;
+
+margin: 24px 0;
 }
 `

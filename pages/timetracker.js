@@ -12,23 +12,21 @@ import Footer from '@/comps/Footer'
 import ProjectList from '@/comps/ProjectList'
 
 export default function Timetracker() {
+  const [showMenu, setShowMenu] = useState(false);
 
   var [email, setEmail] = useState(false)
-  var [emailW, setEmailW] = useState("0")
-  var [emailM, setEmailM] = useState("0")
+  var [emailW, setEmailW] = useState("42px")
 
   function emailIconClick(){
-    if (email === true) {
-      setEmail(false)
+    if (email == false) {
       setEmailW("100%")
-      setEmailM("0 8px")
-      
-    }
-    if (email === false) {
-      setEmailM("0")
-      setEmailW("0")
-
       setEmail(true)
+      console.log(email)
+    }
+    if (email == true) {
+      setEmail(false)
+      setEmailW("42px")
+      console.log(email)
     }
   }
 
@@ -161,14 +159,9 @@ export default function Timetracker() {
             description='Our solution is to develop a cross-platform application that allows you to find your route through Translink, buy tickets, and reload them for your trip, with the added feature of checking for live Translink updates. This would allow experienced riders to continue using Translink without losing time in case they are missing their compass card or if they are going to a place they are not familiar with. This would also allow new travelers to easily learn how to navigate through Translink with one convenient application.'
             />         
         </TextContent>
-
-
-        
-
       </TextContentCont>
-
-
     </Content>
+
     <CardContHeader>
       But wait, there&apos;s more! Take a look at my other projects or contact me with the links below.
     </CardContHeader>
@@ -186,7 +179,6 @@ export default function Timetracker() {
     <Footer 
     onIconClick={emailIconClick}
     emailWidth={emailW}
-    emailMargin={emailM}
     />
 
   </Container>

@@ -9,34 +9,44 @@ import { useState } from 'react'
 
 
 export default function Home() {
-  const [showModal, setShowModal] = useState(false);
+  var [showMenu, setShowMenu] = useState(false);
+  var [menuD, setMenuD] = useState("none")
 
-  var [email, setEmail] = useState(false)
-  var [emailW, setEmailW] = useState("0")
-  var [emailM, setEmailM] = useState("0")
-
-  function emailIconClick(){
-    if (email === true) {
-      setEmail(false)
-      setEmailW("100%")
-      setEmailM("0 8px")
-      
+  function menuClick() {
+    if (showMenu == false) {
+      setMenuD("flex")
+      console.log(showMenu)
+      setShowMenu(true)
     }
-    if (email === false) {
-      setEmailM("0")
-      setEmailW("0")
+    if (showMenu == true) {
+      setMenuD("none")
+      console.log(showMenu)
+      setShowMenu(false)
 
-      setEmail(true)
     }
   }
 
+  var [email, setEmail] = useState(false)
+  var [emailW, setEmailW] = useState("42px")
+
+  function emailIconClick(){
+    if (email == false) {
+      setEmailW("100%")
+      setEmail(true)
+      console.log(email)
+    }
+    if (email == true) {
+      setEmail(false)
+      setEmailW("42px")
+      console.log(email)
+    }
+  }
 
   return <Container>
     <HeaderCont>
-      <Header 
-      showModal={showModal}
-      onClose = {()=> {setShowModal(false)}}
-      ModalonClick = {()=>{setShowModal(true)}}
+      <Header
+      onMenuClick={menuClick}
+      menuDisplay={menuD}
       />
     </HeaderCont>
     
@@ -100,7 +110,6 @@ export default function Home() {
     <Footer 
     onIconClick={emailIconClick}
     emailWidth={emailW}
-    emailMargin={emailM}
     />
 
   </Container>

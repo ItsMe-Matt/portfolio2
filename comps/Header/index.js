@@ -9,26 +9,20 @@ import ReactDOM from "react-dom";
 
 
 export default function Header({
-  showModal = "",
-  onClose = () => {},
-  ModalonClick = () => {}
+  onMenuClick = () => {},
+  menuDisplay = "none"
 }) {
-    return <Container>
+    return <div>
+    <Container>
         <Link href="/">
             <HomeBtn>
                 Matthew Zhao
             </HomeBtn>
         </Link>
 
-        <PopupBtnCont>
-            <GiHamburgerMenu size={24} onClick={ModalonClick} />
-            <Modal
-                onClose={onClose}
-                show={showModal}
-            >
-                Hello from the modal!
-            </Modal>
-        </PopupBtnCont>
+        <MenuBtnCont onClick={()=>{onMenuClick()}}>
+            <GiHamburgerMenu size={24}/>
+        </MenuBtnCont>
 
         <NavCont>
             <Link href="/resume">
@@ -71,18 +65,45 @@ export default function Header({
             </a>
         </IconCont>
         </NavCont>
-
-
     </Container>
+
+    <MenuCont
+    menuDisplay={menuDisplay}>
+        <Link href="/">
+            <NavBtn1>
+                Home
+            </NavBtn1>
+        </Link>
+
+        <Link href="/resume">
+            <NavBtn1>
+                Resume
+            </NavBtn1>
+        </Link>
+        
+        <Link href="/about">
+            <NavBtn1>
+                About Me
+            </NavBtn1>
+        </Link>
+
+        <Link href="/contact">
+            <NavBtn3>
+                Contact Me
+            </NavBtn3>
+        </Link>
+    </MenuCont>
+
+    </div>
 }
 
 const Container = styled.div`
+
 // Desktop and Tablet styles
 @media screen and (min-width: 1024px){
 display: flex;
 justify-content: space-between;
 align-items: flex-end;
-
 padding: 40px 0 12px 0;
 }
 // Mobile styles
@@ -90,7 +111,6 @@ padding: 40px 0 12px 0;
 display: flex;
 justify-content: space-between;
 align-items: flex-end;
-
 padding: 40px 0 12px 0;
 }
 `
@@ -122,10 +142,10 @@ display: flex;
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {
-    display: none;
+display: none;
 }
 `
-const PopupBtnCont = styled.div`
+const MenuBtnCont = styled.div`
 //Desktop styles
 @media screen and (min-width: 1024px){
   display: none;
@@ -158,6 +178,15 @@ align-items: flex-end;
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {
+font-family: Montserrat;
+font-size: 1.25em;
+font-weight: 500;
+text-align: left;
+
+width: 100%;
+padding: 0 0 0 16px;
+margin: 0 0 16px 0;
+border-bottom: 1px solid #404040;
 }
 `
 
@@ -178,11 +207,15 @@ cursor: pointer;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
     transition: 2s;
 }
-
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {
+font-family: Montserrat;
+font-size: 1.5em;
+font-weight: 500;
+text-align: center;
 
+width: 100%;
 }
 `
 
@@ -214,75 +247,25 @@ align-items: center;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
     transition: 1.2s;
 }
-
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {
 }
 `
-
-const Modal = ({ show, onClose, children, title }) => {
-  const [isBrowser, setIsBrowser] = useState(false);
-
-  useEffect(() => {
-    setIsBrowser(true);
-  }, []);
-
-  const handleCloseClick = (e) => {
-    e.preventDefault();
-    onClose();
-  };
-
-  const modalContent = show ? (
-      <StyledModal>
-        <StyledModalHeader>
-          <a href="#" onClick={handleCloseClick}>
-            <AiOutlineClose size={24}/>
-          </a>
-        </StyledModalHeader>
-        <LinkCont>
-        </LinkCont>
-      </StyledModal>
-  ) : null;
-
-  if (isBrowser) {
-    return ReactDOM.createPortal(
-      modalContent,
-      document.getElementById("modal-root")
-    );
-  } else {
-    return null;
-  }
-};
-
-
-const StyledModalHeader = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  font-size: 25px;
-`;
-
-const StyledModal = styled.div`
-  background: #ffffff;
-  width: 100%;
-  height: 100%;
-  padding: 16px;
-  z-index: 1;
-  overflow: hidden;
-  position: sticky;
-  top: 0;
-  left: 0;
-`;
-
-const LinkCont = styled.div`
+const MenuCont = styled.div`
 // Desktop and Tablet styles
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px){
 display: none;
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {
-background-color: red;
-height: 100%;
-width: 1000px;
+    width: 100%;
+    overflow: hidden;
+
+    display: ${(props)=>props.menuDisplay};
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 16px 0 24px 0;
 }
 `

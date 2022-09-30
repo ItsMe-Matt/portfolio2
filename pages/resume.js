@@ -9,23 +9,21 @@ import Footer from '@/comps/Footer'
 
 
 export default function Resume() {
+  const [showMenu, setShowMenu] = useState(false);
 
   var [email, setEmail] = useState(false)
-  var [emailW, setEmailW] = useState("0")
-  var [emailM, setEmailM] = useState("0")
+  var [emailW, setEmailW] = useState("42px")
 
   function emailIconClick(){
-    if (email === true) {
-      setEmail(false)
+    if (email == false) {
       setEmailW("100%")
-      setEmailM("0 8px")
-      
-    }
-    if (email === false) {
-      setEmailM("0")
-      setEmailW("0")
-
       setEmail(true)
+      console.log(email)
+    }
+    if (email == true) {
+      setEmail(false)
+      setEmailW("42px")
+      console.log(email)
     }
   }
 
@@ -63,7 +61,6 @@ export default function Resume() {
     <Footer 
     onIconClick={emailIconClick}
     emailWidth={emailW}
-    emailMargin={emailM}
     />
 
   </Container>

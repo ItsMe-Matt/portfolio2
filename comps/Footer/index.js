@@ -4,8 +4,7 @@ import Link from 'next/link'
 
 export default function Footer({
     onIconClick=()=>{},
-    emailWidth="100%",
-    emailMargin="0 8px"
+    emailWidth="100%"
 }) {
 
 
@@ -25,19 +24,18 @@ export default function Footer({
                 </Icon>
             </a>
 
-            <Icon>
+            <EmailIcon
+            emailW={emailWidth}>
                 <div onClick={()=>{onIconClick()}}>
                     <SiMaildotru size="30px" color="#fff"/>
                 </div>  
                 
                 <IconEmail
                 href="mailto:matthewlukez@yahoo.com"
-                emailM={emailMargin}
-                emailW={emailWidth}
                 >
                     MatthewLukeZ@yahoo.com
                 </IconEmail>              
-            </Icon>
+            </EmailIcon>
 
         </IconCont>
 
@@ -122,6 +120,39 @@ align-items : center;
 width: fit-content;
 transition: 0s;
 }
+`
+
+const EmailIcon = styled.div`
+// Desktop and Tablet styles
+@media screen and (min-width: 1024px) {
+margin: 0 8px;
+padding: 6px 6px 4px 6px;
+box-shadow: 0px 2px 4px rgba(40, 40, 40, 0.4);
+background-color: #122C5C;
+border-radius: 4px;
+cursor: pointer;
+display: flex;
+align-items : center;
+width: ${(props)=>props.emailW};
+transition: 1s;
+&:hover {
+    box-shadow: 0px 2px 6px rgba(40, 40, 40, 0.8);
+    transition: 1s
+}
+}
+// Mobile styles
+@media screen and (max-width: 1023px) {
+margin: 0 8px;
+padding: 6px 6px 4px 6px;
+box-shadow: 0px 2px 4px rgba(40, 40, 40, 0.4);
+background-color: #122C5C;
+border-radius: 4px;
+cursor: pointer;
+display: flex;
+align-items : center;
+width: 100%;
+transition: 0s;
+}
 
 `
 
@@ -154,16 +185,18 @@ font-weight: 500;
 font-size: 1em;
 overflow: hidden;
 transition: 1s;
-padding: ${(props)=>props.emailM};
-width: ${(props)=>props.emailW};
+padding: 0 8px;
+width: 100%;
 
 color: #fff;
+
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {
 display: none;
 }
 `
+
 const ContactBtn = styled.div`
 // Desktop and Tablet styles
 @media screen and (min-width: 1024px) {
