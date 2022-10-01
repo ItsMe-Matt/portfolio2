@@ -22,7 +22,7 @@ export default function Timetracker() {
     if (showMenu == true) {
       setContH("100vh")
     }
-  })
+  },[showMenu])
 
   var [email, setEmail] = useState(false)
   var [emailW, setEmailW] = useState("42px")
@@ -128,6 +128,7 @@ export default function Timetracker() {
               src="/static/Timetracker_mediumFidelity.png"
               width={1852}
               height={920}
+              alt="Medium Fidelity"
               />
             </LowFiCont>
 
@@ -140,6 +141,7 @@ export default function Timetracker() {
               src="/static/Timetracker_highFidelity.png"
               width={1852}
               height={920}
+              alt="High Fidelity before user testing feedback."
               />
             </LowFiCont>
 
@@ -153,6 +155,7 @@ export default function Timetracker() {
               width={1852}
               height={920}
               priority
+              alt='High Fidelity after user testing feedback.'
               />
             </LowFiCont>
 

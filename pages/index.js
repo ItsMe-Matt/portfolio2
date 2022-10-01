@@ -19,7 +19,7 @@ export default function Home() {
     if (showMenu == true) {
       setContH("100vh")
     }
-  })
+  },[showMenu])
 
   var [email, setEmail] = useState(false)
   var [emailW, setEmailW] = useState("42px")

@@ -20,7 +20,7 @@ export default function Contact() {
     if (showMenu == true) {
       setContH("100vh")
     }
-  })
+  }, [showMenu])
 
   var [email, setEmail] = useState(false)
   var [emailW, setEmailW] = useState("42px")

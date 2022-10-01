@@ -23,7 +23,7 @@ export default function CompassPlus() {
     if (showMenu == true) {
       setContH("100vh")
     }
-  })
+  },[showMenu])
 
   var [email, setEmail] = useState(false)
   var [emailW, setEmailW] = useState("42px")
@@ -95,6 +95,7 @@ export default function CompassPlus() {
               src="/static/CompassPlus_Survey.gif"
               width={989}
               height={735}
+              alt="These were some of the questions and results of our preliminary survey."
               />
             </ImgCont>
 
@@ -128,6 +129,7 @@ export default function CompassPlus() {
               src="/static/CompassPlus_LowMediumFidelity.png"
               width={2363}
               height={1824}
+              alt="This is the low to medium fidelity designs that eventually got evolved into the high fidelity."
               />
             </ImgCont>
 
@@ -140,6 +142,7 @@ export default function CompassPlus() {
               src="/static/CompassPlus_HighFidelity.png"
               width={2151}
               height={1776}
+              alt="This is the final design that was given to the developers."
               />
             </ImgCont>
 
@@ -155,6 +158,7 @@ export default function CompassPlus() {
               src="/static/CompassPlus_AlternateDesigns.png"
               width={2192}
               height={1752}
+              alt="These were alternate unused designs that also inspired or evolved into the final designs."
               />
             </ImgCont>
 
@@ -174,6 +178,7 @@ export default function CompassPlus() {
             src="/static/CompassPlus_FinalDesign.gif"
             width={1440}
             height={1080}
+            alt="This is the final design and interactions of the CompassPlus app."
             />
           </ImgCont>
           <CaptionBottom>
