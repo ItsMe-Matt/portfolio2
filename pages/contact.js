@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import Image from 'next/image'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { SiMaildotru, SiLinkedin, SiGithub } from 'react-icons/si'
 
 import Header from '@/comps/Header'
