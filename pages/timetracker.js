@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import Image from 'next/image'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import Header from '@/comps/Header'
 import ProjectCard from '@/comps/ProjectCard'
@@ -59,6 +59,7 @@ export default function Timetracker() {
       timeframe='3 months (March - May 2022)'
       purpose='Practicum'
       tools='Figma'
+      imgsrc='/static/Timetracker_Title.png'
       />
 
 
@@ -183,6 +184,7 @@ export default function Timetracker() {
         <ProjectCard 
         tagline='An organization&apos;s interal-use time tracking mobile application.'
         route='/timetracker'
+        imgsrc='/static/Timetracker_Title.png'
         />
         <ProjectCard 
         tagline='An app that helps you navigate your transit service.'

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import Image from 'next/image'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import Header from '@/comps/Header'
 import ProjectCard from '@/comps/ProjectCard'
@@ -198,6 +198,7 @@ export default function CompassPlus() {
         <ProjectCard 
         tagline='An organization&apos;s interal-use time tracking mobile application.'
         route='/timetracker'
+        imgsrc='/static/Timetracker_Title.png'
         />
         <ProjectCard 
         tagline='An app that helps you navigate your transit service.'
