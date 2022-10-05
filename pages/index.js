@@ -42,9 +42,9 @@ export default function Home() {
   height={contH}>
 
     <Head>
-      <title>About | Matthew Zhao</title>
+      <title>Matthew Zhao's Portfolio</title>
     </Head>
-    
+
     <HeaderCont>
       <Header
       showModal={showMenu}

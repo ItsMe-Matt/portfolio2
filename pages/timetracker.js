@@ -45,7 +45,7 @@ export default function Timetracker() {
   height={contH}>
 
     <Head>
-      <title>About | Matthew Zhao</title>
+      <title>Timetracker | Matthew Zhao</title>
     </Head>
 
     <HeaderCont>
