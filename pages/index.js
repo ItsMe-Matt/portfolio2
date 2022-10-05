@@ -42,7 +42,7 @@ export default function Home() {
   height={contH}>
 
     <Head>
-      <title>Matthew Zhao's Portfolio</title>
+      <title>Matthew Zhao&apos;s Portfolio</title>
     </Head>
 
     <HeaderCont>
