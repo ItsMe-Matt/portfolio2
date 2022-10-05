@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import Image from 'next/image'
 import Link from 'next/link'
+import Head from 'next/head'
 
 import Header from '@/comps/Header'
 import ProjectCard from '@/comps/ProjectCard'
@@ -39,6 +40,11 @@ export default function Home() {
 
   return <Container
   height={contH}>
+
+    <Head>
+      <title>About | Matthew Zhao</title>
+    </Head>
+    
     <HeaderCont>
       <Header
       showModal={showMenu}

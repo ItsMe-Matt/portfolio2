@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
+import Head from 'next/head'
 
 
 import Header from '@/comps/Header'
@@ -37,7 +38,12 @@ export default function Resume() {
     }
   }
 
-  return <Container>
+  return <Container
+  height={contH}>
+    <Head>
+      <title>Resume | Matthew Zhao</title>
+    </Head>
+
     <HeaderCont>
       <Header
       showModal={showMenu}
@@ -96,6 +102,9 @@ align-items: center;
 display: flex;
 flex-direction: column;
 align-items: center;
+overflow: hidden;
+
+height: ${(props)=>props.height}
 }
 `
 

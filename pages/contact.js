@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { SiMaildotru, SiLinkedin, SiGithub } from 'react-icons/si'
+import Head from 'next/head'
 
 import Header from '@/comps/Header'
 import ProjectCard from '@/comps/ProjectCard'
@@ -38,7 +39,13 @@ export default function Contact() {
     }
   }
 
-  return <Container>
+  return <Container
+  height={contH}>
+
+    <Head>
+      <title>Contact Me | Matthew Zhao</title>
+    </Head>
+
     <HeaderCont>
       <Header
       showModal={showMenu}
@@ -137,6 +144,9 @@ align-items: center;
 display: flex;
 flex-direction: column;
 align-items: center;
+overflow: hidden;
+
+height: ${(props)=>props.height}
 }
 `
 

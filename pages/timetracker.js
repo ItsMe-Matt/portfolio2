@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
+import Head from 'next/head'
 
 import Header from '@/comps/Header'
 import ProjectCard from '@/comps/ProjectCard'
@@ -40,7 +41,13 @@ export default function Timetracker() {
     }
   }
 
-  return <Container>
+  return <Container
+  height={contH}>
+
+    <Head>
+      <title>About | Matthew Zhao</title>
+    </Head>
+
     <HeaderCont>
       <div id='intro' />
       <Header
@@ -218,6 +225,9 @@ align-items: center;
 display: flex;
 flex-direction: column;
 align-items: center;
+overflow: hidden;
+
+height: ${(props)=>props.height}
 }
 `
 
