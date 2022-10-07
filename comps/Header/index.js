@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { SiMaildotru, SiLinkedin, SiGithub } from 'react-icons/si'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { AiOutlineClose } from 'react-icons/ai'
+import Image from "next/image"
 
 import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
@@ -17,6 +18,16 @@ export default function Header({
     <Container>
         <Link href="/">
             <HomeBtn>
+                <LogoCont>
+                    <Image 
+                    src="/static/favicon.png"
+                    layout="responsive"
+                    width={128}
+                    height={128}
+                    objectFit="cover"
+                    objectPosition="center"
+                    />
+                </LogoCont>
                 Matthew Zhao
             </HomeBtn>
         </Link>
@@ -166,6 +177,7 @@ font-weight: 600;
 font-size: 1.5em;
 cursor: pointer;
 color: #122C5C;
+display: flex;
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {
@@ -173,6 +185,7 @@ font-family: Montserrat;
 font-size: 1.25em;
 font-weight: 500;
 letter-spacing: 0em;
+display: flex;
 
 color: #122C5C;
 }
@@ -335,3 +348,9 @@ display: flex;
 flex-direction: column;
 justify-content: space-between;
 `;
+
+const LogoCont = styled.div`
+width: 32px;
+height: 100%;
+margin-right: 4px;
+`
