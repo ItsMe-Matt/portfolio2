@@ -250,7 +250,7 @@ font-weight: 300;
 font-size: 1.1em;
 line-height: 28px;
 
-margin: 0 0 40px 0;
+margin: 0 0 32px 0;
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {
