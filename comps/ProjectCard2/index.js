@@ -149,7 +149,7 @@ const TxTHeader = styled.div`
 @media screen and (min-width: 1024px){
 
 font-family: Montserrat;
-font-weight: 900;
+font-weight: 600;
 font-size: 1.75em;
 margin: 16px 0;
 color: #122C5C;
