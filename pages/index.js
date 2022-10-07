@@ -57,15 +57,15 @@ export default function Home() {
       <HeroCont>
         <HeroTxtCont>
           <HeroTxtH1>
-            Hello there,
+            Hello Hello, I am Matthew Zhao
           </HeroTxtH1>
 
           <HeroTxtH2>
-          I design comfortable and familiar experiences for your users.
+          I am a UI/UX designer with a strong background in graphic design and frontend development.
           </HeroTxtH2>
 
           <HeroTxtP>
-          I am a BCIT, Digital Design and Development graduate capable of adding value by bringing my skills and experience in UI/UX design, graphic design, and frontend development.
+          I am a practical problem solver who loves working with different teams to provide the best user experience for everyone. I am an initiator, a team player, and a clear communicator who enjoys building on strengths and working through weakness to achieve success.
           </HeroTxtP>
 
           <HeroBtnRow>
@@ -209,7 +209,7 @@ color: #122C5C;
 @media screen and (min-width: 1024px) {
 font-family: 'Montserrat';
 font-weight: 900;
-font-size: 1.5em;
+font-size: 1.25em;
 margin: 0 0 8px 0;
 
 }
@@ -228,7 +228,7 @@ color: #122C5C;
 @media screen and (min-width: 1024px) {
 font-family: 'Montserrat';
 font-weight: 900;
-font-size: 2.25em;
+font-size: 2.0em;
 
 margin: 0 0 16px 0;
 }
@@ -247,10 +247,10 @@ color: #868686;
 @media screen and (min-width: 1024px) {
 font-family: 'Oxygen';
 font-weight: 300;
-font-size: 1.125em;
+font-size: 1.1em;
 line-height: 28px;
 
-margin: 0 0 40px 0;
+margin: 0 0 32px 0;
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {
