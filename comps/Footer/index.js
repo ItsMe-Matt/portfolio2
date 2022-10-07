@@ -48,7 +48,7 @@ export default function Footer({
 
        
        <Text>
-        Copyright &copy; 2022 Matthew Zhao
+        This website was coded by Matthew Zhao using NextJS (React). | Copyright &copy; 2022 Matthew Zhao
        </Text>
 
     </Container>
@@ -164,6 +164,7 @@ font-weight: 300;
 font-size: 1em;
 
 color: #868686;
+margin-bottom: 8px;
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {
@@ -172,7 +173,9 @@ font-size: 12px;
 font-weight: 300;
 line-height: 15px;
 letter-spacing: 0em;
-text-align: left;
+text-align: center;
+
+margin-bottom: 8px;
 
 }
 `

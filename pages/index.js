@@ -62,7 +62,7 @@ export default function Home() {
           </HeroTxtH1>
 
           <HeroTxtH2>
-          I am a UI/UX designer with a strong background in graphic design.
+          I am a UI/UX designer with a strong background in frontend development.
           </HeroTxtH2>
 
           <HeroTxtP>
@@ -110,7 +110,7 @@ export default function Home() {
         imgsrc='/static/Timetracker_Title.png'
         />
       <ProjectCard2
-        tagline='Designed to become Translink&apos;s Official Mobile Application'
+        tagline='An app designed to help you navigate Translink&apos;s services'
         description='CompassPlus is an app designed to replace your physical Compass card with a digital NFC card you can use on your phone.'
         role='UI/UX Designer'
         purpose='Class Project'
@@ -253,7 +253,7 @@ color: #868686;
 @media screen and (min-width: 1024px) {
 font-family: 'Oxygen';
 font-weight: 300;
-font-size: 1.1em;
+font-size: 1.125em;
 line-height: 28px;
 
 margin: 0 0 32px 0;
@@ -292,7 +292,7 @@ align-items: center;
 padding: 12px 32px;
 background: #122C5C;
 box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
-border-radius: 52px;
+border-radius: 8px;
 
 font-family: 'Montserrat';
 font-weight: 600;
@@ -339,7 +339,7 @@ align-items: center;
 padding: 12px 32px;
 background: #fff;
 box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-border-radius: 52px;
+border-radius: 8px;
 
 font-family: 'Montserrat';
 font-weight: 500;
