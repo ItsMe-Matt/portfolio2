@@ -165,7 +165,6 @@ height: ${(props)=>props.height}
 `
 
 const HeaderCont = styled.div`
-background-color: #F0F4FF;
 height: fit-content;
 width: 100%;
 

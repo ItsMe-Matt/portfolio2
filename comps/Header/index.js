@@ -228,17 +228,17 @@ font-size: 1em;
 border-radius: 8px;
 //border: black 1px solid;
 //padding: 8px 32px;
-padding: 8px 16px;
+padding: 8px 24px;
 //box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
 //box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
-margin-right: 16px;
+margin-right: 8px;
 cursor: pointer;
 display: flex;
 align-items: flex-end;
 &:hover {
     
-    //box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-    transition: 1.2s;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+    transition: 1s;
 }
 }
 // Mobile styles
@@ -262,17 +262,17 @@ font-size: 1em;
 border-radius: 8px;
 //border: black 1px solid;
 //padding: 8px 32px;
-padding: 8px 16px;
+padding: 8px 24px;
 //box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
 //box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
-margin-right: 32px;
+margin-right: 24px;
 cursor: pointer;
 display: flex;
 align-items: flex-end;
 &:hover {
     
-    //box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-    transition: 1.2s;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+    transition: 1s;
 }
 }
 // Mobile styles
@@ -303,7 +303,7 @@ cursor: pointer;
 
 &:hover {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-    transition: 2s;
+    transition: 1s;
 }
 }
 // Mobile styles
@@ -395,5 +395,5 @@ justify-content: space-between;
 const LogoCont = styled.div`
 width: 32px;
 height: 100%;
-margin-right: 4px;
+margin-right: 8px;
 `

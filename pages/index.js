@@ -5,6 +5,7 @@ import Head from 'next/head'
 
 import Header from '@/comps/Header'
 import ProjectCard from '@/comps/ProjectCard'
+import ProjectCard2 from '@/comps/ProjectCard2'
 import Footer from '@/comps/Footer'
 import { useEffect, useState } from 'react'
 
@@ -61,7 +62,7 @@ export default function Home() {
           </HeroTxtH1>
 
           <HeroTxtH2>
-          I am a UI/UX designer with a strong background in graphic design and frontend development.
+          I am a UI/UX designer with a strong background in graphic design.
           </HeroTxtH2>
 
           <HeroTxtP>
@@ -97,18 +98,25 @@ export default function Home() {
         </HeroImgCont>
       </HeroCont>
 
-      <CardCont>
-        <ProjectCard 
-        tagline='An organization&apos;s interal-use time tracking mobile application.'
+      <ProjectCard2 
+         tagline='An organization&apos;s
+         internal-use timetracking app'
+         description='This app is designed to help volunteers and mentors of Game of Apps to record and track the amount of time spent in each activity and project to provide accurate information to sponsors.'
+         role='UI/UX Designer'
+         timeframe='3 months (March - May 2022)'
+         purpose='Practicum'
+         tools='Figma'
         route='/timetracker'
         imgsrc='/static/Timetracker_Title.png'
         />
-        <ProjectCard 
-        tagline='An app that helps you navigate your transit service.'
+      <ProjectCard2
+        tagline='Designed to become Translink&apos;s Official Mobile Application'
+        description='CompassPlus is an app designed to replace your physical Compass card with a digital NFC card you can use on your phone.'
+        role='UI/UX Designer'
+        purpose='Class Project'
+        tools='Figma, Illustrator, InDesign, React, Expo'
         route='/compassplus'
         />
-
-      </CardCont>
     </Content>
 
     <Footer 
@@ -141,9 +149,7 @@ height: ${(props)=>props.height}
 `
 
 const HeaderCont = styled.div`
-//background-color: #F0F4FF;
-
-// Desktop styles
+// Desktop and Tablet styles
 @media screen and (min-width: 1024px) {
 width: 1024px;
 padding: 0 24px;
@@ -171,6 +177,7 @@ align-items: center;
 // Mobile styles
 @media screen and (max-width: 1023px) {
 padding: 0 16px;
+margin: 0 0 24px 0;
 width: 100%;
 }
 `
@@ -199,7 +206,6 @@ width: 488px;
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {
-
 }
 `
 
