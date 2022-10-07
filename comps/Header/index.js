@@ -226,18 +226,13 @@ font-family: Montserrat;
 font-weight: 600;
 font-size: 1em;
 border-radius: 8px;
-//border: black 1px solid;
-//padding: 8px 32px;
 padding: 8px 24px;
-//box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
-//box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
 margin-right: 8px;
 cursor: pointer;
 display: flex;
 align-items: flex-end;
-&:hover {
-    
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+&:hover {    
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
     transition: 1s;
 }
 }
@@ -247,7 +242,6 @@ font-family: Montserrat;
 font-size: 1.75em;
 font-weight: 500;
 text-align: center;
-
 width: 100%;
 padding: 0 0 0 16px;
 margin: 0 0 24px 0;
@@ -260,18 +254,13 @@ font-family: Montserrat;
 font-weight: 600;
 font-size: 1em;
 border-radius: 8px;
-//border: black 1px solid;
-//padding: 8px 32px;
 padding: 8px 24px;
-//box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
-//box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
 margin-right: 24px;
 cursor: pointer;
 display: flex;
 align-items: flex-end;
 &:hover {
-    
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
     transition: 1s;
 }
 }
@@ -281,7 +270,6 @@ font-family: Montserrat;
 font-size: 1.75em;
 font-weight: 500;
 text-align: center;
-
 width: 100%;
 padding: 0 0 0 16px;
 margin: 0 0 24px 0;
@@ -311,14 +299,11 @@ cursor: pointer;
 display: flex;
 justify-content: center;
 align-items: center;
-
-
 width: 100%;
 padding: 16px 0;
 background: #122C5C;
 box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
 border-radius: 52px;
-
 font-family: 'Montserrat';
 font-weight: 600;
 font-size: 1.25em;
@@ -351,7 +336,6 @@ border-radius: 4px;
 cursor: pointer;
 display: flex;
 align-items: center;
-
 &:hover {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
     transition: 1.2s;
@@ -368,7 +352,6 @@ display: none;
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {
-
 }
 `
   
@@ -386,7 +369,6 @@ padding: 16px;
 z-index: 1;
 overflow: hidden;
 position: absolute;
-
 display: flex;
 flex-direction: column;
 justify-content: space-between;
