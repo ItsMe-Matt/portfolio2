@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { SiMaildotru, SiLinkedin, SiGithub } from 'react-icons/si'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { AiOutlineClose } from 'react-icons/ai'
+import Image from "next/image"
 
 import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
@@ -17,6 +18,16 @@ export default function Header({
     <Container>
         <Link href="/">
             <HomeBtn>
+                <LogoCont>
+                    <Image 
+                    src="/static/favicon.png"
+                    layout="responsive"
+                    width={128}
+                    height={128}
+                    objectFit="cover"
+                    objectPosition="center"
+                    />
+                </LogoCont>
                 Matthew Zhao
             </HomeBtn>
         </Link>
@@ -28,27 +39,32 @@ export default function Header({
                 onClose={onClose}
                 show={showModal}
             >
-                Hello from the modal!
             </Modal>
         </MenuBtnCont>
 
         <NavCont>
+            <Link href="/">
+                <NavBtn1>
+                    home
+                </NavBtn1>
+            </Link>
+
             <Link href="/resume">
                 <NavBtn1>
-                    Resume
+                    resume
                 </NavBtn1>
             </Link>
             
 
             <Link href="/about">
-                <NavBtn1>
-                    About Me
-                </NavBtn1>
+                <NavBtn2>
+                    about
+                </NavBtn2>
             </Link>
 
             <Link href="/contact">
                 <NavBtn3>
-                    Contact Me
+                    contact me
                 </NavBtn3>
             </Link>
 
@@ -103,19 +119,19 @@ const Modal = ({ show, onClose, children, title }) => {
             <MenuCont>
                 <Link href="/">
                     <NavBtn1>
-                        Home
+                        home
                     </NavBtn1>
                 </Link>
 
                 <Link href="/resume">
                     <NavBtn1>
-                        Resume
+                        resume
                     </NavBtn1>
                 </Link>
 
                 <Link href="/about">
                     <NavBtn1>
-                        About Me
+                        about
                     </NavBtn1>
                 </Link>
 
@@ -124,7 +140,7 @@ const Modal = ({ show, onClose, children, title }) => {
            
             <Link href="/contact">
                 <NavBtn3>
-                    Contact Me
+                    contact me
                 </NavBtn3>
             </Link>
         </StyledModal>
@@ -166,6 +182,8 @@ font-weight: 600;
 font-size: 1.5em;
 cursor: pointer;
 color: #122C5C;
+display: flex;
+align-items: flex-end;
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {
@@ -173,6 +191,8 @@ font-family: Montserrat;
 font-size: 1.25em;
 font-weight: 500;
 letter-spacing: 0em;
+display: flex;
+align-items: flex-end;
 
 color: #122C5C;
 }
@@ -203,20 +223,17 @@ const NavBtn1 = styled.div`
 //Desktop styles
 @media screen and (min-width: 1024px){
 font-family: Montserrat;
-font-weight: 500;
+font-weight: 600;
 font-size: 1em;
 border-radius: 8px;
-//border: black 1px solid;
-padding: 8px 32px;
-//box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+padding: 8px 24px;
 margin-right: 8px;
 cursor: pointer;
 display: flex;
 align-items: flex-end;
-&:hover {
+&:hover {    
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-    transition: 1.2s;
+    transition: 1s;
 }
 }
 // Mobile styles
@@ -225,7 +242,34 @@ font-family: Montserrat;
 font-size: 1.75em;
 font-weight: 500;
 text-align: center;
-
+width: 100%;
+padding: 0 0 0 16px;
+margin: 0 0 24px 0;
+}
+`
+const NavBtn2 = styled.div`
+//Desktop styles
+@media screen and (min-width: 1024px){
+font-family: Montserrat;
+font-weight: 600;
+font-size: 1em;
+border-radius: 8px;
+padding: 8px 24px;
+margin-right: 24px;
+cursor: pointer;
+display: flex;
+align-items: flex-end;
+&:hover {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    transition: 1s;
+}
+}
+// Mobile styles
+@media screen and (max-width: 1023px) {
+font-family: Montserrat;
+font-size: 1.75em;
+font-weight: 500;
+text-align: center;
 width: 100%;
 padding: 0 0 0 16px;
 margin: 0 0 24px 0;
@@ -247,7 +291,7 @@ cursor: pointer;
 
 &:hover {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-    transition: 2s;
+    transition: 1s;
 }
 }
 // Mobile styles
@@ -255,14 +299,11 @@ cursor: pointer;
 display: flex;
 justify-content: center;
 align-items: center;
-
-
 width: 100%;
 padding: 16px 0;
 background: #122C5C;
 box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
 border-radius: 52px;
-
 font-family: 'Montserrat';
 font-weight: 600;
 font-size: 1.25em;
@@ -295,7 +336,6 @@ border-radius: 4px;
 cursor: pointer;
 display: flex;
 align-items: center;
-
 &:hover {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
     transition: 1.2s;
@@ -312,7 +352,6 @@ display: none;
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {
-
 }
 `
   
@@ -330,8 +369,13 @@ padding: 16px;
 z-index: 1;
 overflow: hidden;
 position: absolute;
-
 display: flex;
 flex-direction: column;
 justify-content: space-between;
 `;
+
+const LogoCont = styled.div`
+width: 32px;
+height: 100%;
+margin-right: 8px;
+`

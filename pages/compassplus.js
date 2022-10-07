@@ -59,7 +59,7 @@ export default function CompassPlus() {
     
     <Content>
       <ProjectHeader 
-      tagline='Designed to become Translink&apos;s Official Mobile Application'
+      tagline='An app designed to help you navigate Translink&apos;s services'
       description='CompassPlus is an app designed to replace your physical Compass card with a digital NFC card you can use on your phone.'
       role='UI/UX Designer'
       timeframe='3 months (Sept - Dec 2021)'
@@ -105,9 +105,9 @@ export default function CompassPlus() {
               />
             </ImgCont>
 
-            <CaptionBottom>
+            <Caption>
               These were some of the questions and results of our preliminary survey.
-            </CaptionBottom>
+            </Caption>
           </SectionCont>
 
           <SectionCont id='problem'>
@@ -155,6 +155,7 @@ export default function CompassPlus() {
             <CaptionBottom>
               This is the final design that was given to the developers.
             </CaptionBottom>
+
             <ProjectP 
             description='As the designing progressed, another team member created their own version of my cards page, and after minor user testing, we decided to progress with their design instead. After that, I decided to move on to designing components. With designing components, there was once again a hand off and evolution of ideas and designs especially when we handed the designs over to the developers. We had also decided to have one person finalize all the designs before the developers started developing the frontend to keep the style consistent.'
             />
@@ -168,9 +169,9 @@ export default function CompassPlus() {
               />
             </ImgCont>
 
-            <CaptionBottom>
+            <Caption>
               These were alternate unused designs that also inspired or evolved into the final designs.
-            </CaptionBottom>
+            </Caption>
           </SectionCont>
 
           <SectionCont id='final'>
@@ -187,9 +188,9 @@ export default function CompassPlus() {
             alt="This is the final design and interactions of the CompassPlus app."
             />
           </ImgCont>
-          <CaptionBottom>
+          <Caption>
             This is the final design and interactions of the CompassPlus app.
-          </CaptionBottom>
+          </Caption>
           </SectionCont>
 
           <SectionCont id='conclusion' />
@@ -363,32 +364,6 @@ padding: 0 20px;
 }
 `
 
-const Caption = styled.div`
-// Desktop and Tablet styles
-@media screen and (min-width: 1024px) {
-width: 100%;
-text-align: center;
-font-family: 'Oxygen';
-font-weight: 300;
-font-size: 1em;
-font-style: italic;
-margin: 0 0 40px 0;;
-
-color: #404040;
-}
-// Mobile styles
-@media screen and (max-width: 1023px) {
-width: 100%;
-text-align: center;
-font-family: 'Oxygen';
-font-weight: 300;
-font-size: 1em;
-font-style: italic;
-
-color: #404040;
-}
-`
-
 const ImgCont = styled.div`
 // Desktop and Tablet styles
 @media screen and (min-width: 1024px) {
@@ -406,6 +381,32 @@ margin: 48px 0 16px 0;
 }
 `
 
+const Caption = styled.div`
+// Desktop and Tablet styles
+@media screen and (min-width: 1024px) {
+width: 100%;
+text-align: center;
+font-family: 'Oxygen';
+font-weight: 300;
+font-size: 1em;
+font-style: italic;
+
+color: #404040;
+}
+// Mobile styles
+@media screen and (max-width: 1023px) {
+width: 100%;
+text-align: center;
+font-family: 'Oxygen';
+font-weight: 300;
+font-size: 1em;
+font-style: italic;
+
+color: #404040;
+margin-bottom: 56px;
+}
+`
+
 const CaptionBottom = styled.div`
 // Desktop and Tablet styles
 @media screen and (min-width: 1024px) {
@@ -415,6 +416,7 @@ font-family: 'Oxygen';
 font-weight: 300;
 font-size: 1em;
 font-style: italic;
+margin-bottom: 32px;
 
 color: #404040;
 }

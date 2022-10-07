@@ -165,6 +165,7 @@ font-weight: 300;
 font-size: 1em;
 
 color: #868686;
+margin-bottom: 8px;
 }
 // Mobile styles
 @media screen and (max-width: 1023px) {
@@ -174,7 +175,6 @@ font-weight: 300;
 line-height: 15px;
 letter-spacing: 0em;
 text-align: center;
-
 }
 `
 

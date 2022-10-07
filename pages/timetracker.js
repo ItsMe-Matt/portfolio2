@@ -234,6 +234,7 @@ height: ${(props)=>props.height}
 const HeaderCont = styled.div`
 height: fit-content;
 width: 100%;
+
 // Desktop and tablet styles
 @media screen and (min-width: 1024px) {
 width: 1024px;
