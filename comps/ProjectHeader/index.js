@@ -101,7 +101,7 @@ position: relative;
 width: 346px;
 height: 435.96px;
 border-radius: 8px;
-
+filter: drop-shadow(-12px 12px 0px #122C5C);
 overflow: hidden;
 }
 // Mobile styles
