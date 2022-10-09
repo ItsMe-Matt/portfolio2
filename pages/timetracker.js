@@ -110,7 +110,7 @@ export default function Timetracker() {
           <SectionCont id='problem'>
             <ProjectH1P 
             title='Problem Identification'
-            description='When our administration is asked about the total hours being put into the program by mentors and volunteers, our administrators usually reply with a rough estimate. However, this estimate isn’t the most accurate or precise and that is that problem that this app aims to solve.'
+            description='When our administration is asked about the total hours being put into the program by mentors and volunteers, our administrators usually reply with a rough estimate. However, this estimate isn’t the most accurate or precise and that is the problem this app aims to solve.'
             />
           </SectionCont>
 
