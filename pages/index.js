@@ -58,15 +58,15 @@ export default function Home() {
       <HeroCont>
         <HeroTxtCont>
           <HeroTxtH1>
-            Hello Hello, I am Matthew Zhao
+            Hello Hello, I am Matthew Zhao.
           </HeroTxtH1>
 
           <HeroTxtH2>
-          I am a UI/UX designer with a strong background in frontend development.
+          I create user centered applications that solves problems, creates value, and encourages users to return.
           </HeroTxtH2>
 
           <HeroTxtP>
-          I am a practical problem solver who loves working with different teams to provide the best user experience for everyone. I am an initiator, a team player, and a clear communicator who enjoys building on strengths and working through weakness to achieve success.
+          I am an initiator, a team player, and a clear communicator who enjoys building on strengths and working through weakness to achieve success.
           </HeroTxtP>
 
           <HeroBtnRow>
