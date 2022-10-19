@@ -231,6 +231,7 @@ margin-right: 8px;
 cursor: pointer;
 display: flex;
 align-items: flex-end;
+color: #122C5C;
 &:hover {    
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
     transition: 1s;
@@ -259,6 +260,7 @@ margin-right: 24px;
 cursor: pointer;
 display: flex;
 align-items: flex-end;
+color: #122C5C;
 &:hover {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
     transition: 1s;
