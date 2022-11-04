@@ -13,9 +13,11 @@ export default function Header({
   onMenuClick = () => {},
   showModal = "",
   onClose = () => {},
+  page = ""
 }) {
-    return <div>
-    <Container>
+    if (page === "") {
+        return <div>
+        <Container>
         <Link href="/">
             <HomeBtn>
                 <LogoCont>
@@ -89,12 +91,248 @@ export default function Header({
             </a>
         </IconCont>
         </NavCont>
-    </Container>
+        </Container>
+        </div>
+    }
+    if (page === "home") {
+        return <div>
+        <Container>
+        <Link href="/">
+            <HomeBtn>
+                <LogoCont>
+                    <Image 
+                    src="/static/favicon.png"
+                    layout="responsive"
+                    width={128}
+                    height={128}
+                    objectFit="cover"
+                    objectPosition="center"
+                    />
+                </LogoCont>
+                Matthew Zhao
+            </HomeBtn>
+        </Link>
 
+        <MenuBtnCont>
+            <GiHamburgerMenu size={24} onClick={onMenuClick}/>
 
+            <Modal
+                onClose={onClose}
+                show={showModal}
+            >
+            </Modal>
+        </MenuBtnCont>
 
-    </div>
-}
+        <NavCont>
+            <Link href="/">
+                <NavBtn1Active>
+                    home
+                </NavBtn1Active>
+            </Link>
+
+            <Link href="/resume">
+                <NavBtn1>
+                    resume
+                </NavBtn1>
+            </Link>
+            
+
+            <Link href="/about">
+                <NavBtn2>
+                    about
+                </NavBtn2>
+            </Link>
+
+            <Link href="/contact">
+                <NavBtn3>
+                    contact me
+                </NavBtn3>
+            </Link>
+
+            <IconCont>
+            <a href="https://www.linkedin.com/in/mlzhao/" target="_blank">
+                <Icon>
+                    <SiLinkedin size="26px" color="#fff"/>
+                </Icon>
+            </a>
+            
+            
+            <a href="https://github.com/ItsMe-Matt" target="_blank">
+                <Icon>
+                    <SiGithub size="26px" color="#fff"/>
+                </Icon>
+            </a>
+
+            <a href="mailto:matthewlukez@yahoo.com">
+                <Icon>    
+                    <SiMaildotru size="26px" color="#fff"/>
+                </Icon>
+            </a>
+        </IconCont>
+        </NavCont>
+        </Container>
+        </div>
+    }
+    if (page === "resume") {
+        return <div>
+        <Container>
+        <Link href="/">
+            <HomeBtn>
+                <LogoCont>
+                    <Image 
+                    src="/static/favicon.png"
+                    layout="responsive"
+                    width={128}
+                    height={128}
+                    objectFit="cover"
+                    objectPosition="center"
+                    />
+                </LogoCont>
+                Matthew Zhao
+            </HomeBtn>
+        </Link>
+
+        <MenuBtnCont>
+            <GiHamburgerMenu size={24} onClick={onMenuClick}/>
+
+            <Modal
+                onClose={onClose}
+                show={showModal}
+            >
+            </Modal>
+        </MenuBtnCont>
+
+        <NavCont>
+            <Link href="/">
+                <NavBtn1>
+                    home
+                </NavBtn1>
+            </Link>
+
+            <Link href="/resume">
+                <NavBtn1Active>
+                    resume
+                </NavBtn1Active>
+            </Link>
+            
+
+            <Link href="/about">
+                <NavBtn2>
+                    about
+                </NavBtn2>
+            </Link>
+
+            <Link href="/contact">
+                <NavBtn3>
+                    contact me
+                </NavBtn3>
+            </Link>
+
+            <IconCont>
+            <a href="https://www.linkedin.com/in/mlzhao/" target="_blank">
+                <Icon>
+                    <SiLinkedin size="26px" color="#fff"/>
+                </Icon>
+            </a>
+            
+            
+            <a href="https://github.com/ItsMe-Matt" target="_blank">
+                <Icon>
+                    <SiGithub size="26px" color="#fff"/>
+                </Icon>
+            </a>
+
+            <a href="mailto:matthewlukez@yahoo.com">
+                <Icon>    
+                    <SiMaildotru size="26px" color="#fff"/>
+                </Icon>
+            </a>
+        </IconCont>
+        </NavCont>
+        </Container>
+        </div>
+    }
+    if (page === "about") {
+        return <div>
+        <Container>
+        <Link href="/">
+            <HomeBtn>
+                <LogoCont>
+                    <Image 
+                    src="/static/favicon.png"
+                    layout="responsive"
+                    width={128}
+                    height={128}
+                    objectFit="cover"
+                    objectPosition="center"
+                    />
+                </LogoCont>
+                Matthew Zhao
+            </HomeBtn>
+        </Link>
+
+        <MenuBtnCont>
+            <GiHamburgerMenu size={24} onClick={onMenuClick}/>
+
+            <Modal
+                onClose={onClose}
+                show={showModal}
+            >
+            </Modal>
+        </MenuBtnCont>
+
+        <NavCont>
+            <Link href="/">
+                <NavBtn1>
+                    home
+                </NavBtn1>
+            </Link>
+
+            <Link href="/resume">
+                <NavBtn1>
+                    resume
+                </NavBtn1>
+            </Link>
+            
+
+            <Link href="/about">
+                <NavBtn2Active>
+                    about
+                </NavBtn2Active>
+            </Link>
+
+            <Link href="/contact">
+                <NavBtn3>
+                    contact me
+                </NavBtn3>
+            </Link>
+
+            <IconCont>
+            <a href="https://www.linkedin.com/in/mlzhao/" target="_blank">
+                <Icon>
+                    <SiLinkedin size="26px" color="#fff"/>
+                </Icon>
+            </a>
+            
+            
+            <a href="https://github.com/ItsMe-Matt" target="_blank">
+                <Icon>
+                    <SiGithub size="26px" color="#fff"/>
+                </Icon>
+            </a>
+
+            <a href="mailto:matthewlukez@yahoo.com">
+                <Icon>    
+                    <SiMaildotru size="26px" color="#fff"/>
+                </Icon>
+            </a>
+        </IconCont>
+        </NavCont>
+        </Container>
+        </div>
+    }
+    }
+    
 
 const Modal = ({ show, onClose, children, title }) => {
     const [isBrowser, setIsBrowser] = useState(false);
@@ -233,8 +471,8 @@ display: flex;
 align-items: flex-end;
 color: #122C5C;
 &:hover {    
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-    transition: 1s;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+    transition: 0.25s;
 }
 }
 // Mobile styles
@@ -246,6 +484,36 @@ text-align: center;
 width: 100%;
 padding: 0 0 0 16px;
 margin: 0 0 24px 0;
+}
+`
+const NavBtn1Active = styled.div`
+//Desktop styles
+@media screen and (min-width: 1024px){
+font-family: Montserrat;
+font-weight: 600;
+font-size: 1em;
+border-radius: 8px;
+padding: 8px 24px;
+margin-right: 8px;
+cursor: pointer;
+display: flex;
+align-items: flex-end;
+color: #122C5C;
+box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+&:hover {    
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+    transition: 0.25s;
+}
+// Mobile styles
+@media screen and (max-width: 1023px) {
+font-family: Montserrat;
+font-size: 1.75em;
+font-weight: 500;
+text-align: center;
+width: 100%;
+padding: 0 0 0 16px;
+margin: 0 0 24px 0;
+}
 }
 `
 const NavBtn2 = styled.div`
@@ -262,8 +530,39 @@ display: flex;
 align-items: flex-end;
 color: #122C5C;
 &:hover {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-    transition: 1s;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+    transition: 0.25s;
+}
+}
+// Mobile styles
+@media screen and (max-width: 1023px) {
+font-family: Montserrat;
+font-size: 1.75em;
+font-weight: 500;
+text-align: center;
+width: 100%;
+padding: 0 0 0 16px;
+margin: 0 0 24px 0;
+}
+`
+
+const NavBtn2Active = styled.div`
+//Desktop styles
+@media screen and (min-width: 1024px){
+font-family: Montserrat;
+font-weight: 600;
+font-size: 1em;
+border-radius: 8px;
+padding: 8px 24px;
+margin-right: 24px;
+cursor: pointer;
+display: flex;
+align-items: flex-end;
+color: #122C5C;
+box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.7);
+&:hover {
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+    transition: 0.25s;
 }
 }
 // Mobile styles
@@ -285,15 +584,14 @@ font-family: Montserrat;
 font-weight: 500;
 font-size: 1em;
 color: #fff;
-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
 background: #122C5C;
 border-radius: 8px;
 padding: 8px 32px;
 cursor: pointer;
 
 &:hover {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-    transition: 1s;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+    transition: 0.25s;
 }
 }
 // Mobile styles

@@ -48,6 +48,7 @@ export default function About() {
       showModal={showMenu}
       onClose = {()=> {setShowMenu(false); console.log(showMenu)}}
       onMenuClick = {()=>{setShowMenu(true); console.log(showMenu)}}
+      page="about"
       />
     </HeaderCont>
     
