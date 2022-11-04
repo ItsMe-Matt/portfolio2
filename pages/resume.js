@@ -49,6 +49,7 @@ export default function Resume() {
       showModal={showMenu}
       onClose = {()=> {setShowMenu(false); console.log(showMenu)}}
       onMenuClick = {()=>{setShowMenu(true); console.log(showMenu)}}
+      page="resume"
       />
     </HeaderCont>
     

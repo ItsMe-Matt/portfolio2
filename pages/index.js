@@ -51,6 +51,7 @@ export default function Home() {
       showModal={showMenu}
       onClose = {()=> {setShowMenu(false); console.log(showMenu)}}
       onMenuClick = {()=>{setShowMenu(true); console.log(showMenu)}}
+      page="home"
       />
     </HeaderCont>
     
@@ -291,7 +292,7 @@ align-items: center;
 
 padding: 12px 32px;
 background: #122C5C;
-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+//box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
 border-radius: 8px;
 
 font-family: 'Montserrat';
@@ -302,8 +303,8 @@ cursor: pointer;
 margin: 0 16px 0 0;
 
 &:hover {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-    transition: 0.5s;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+    transition: 0.25s;
 }
 }
 // Mobile styles
@@ -338,7 +339,7 @@ align-items: center;
 
 padding: 12px 32px;
 background: #fff;
-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
 border-radius: 8px;
 
 font-family: 'Montserrat';
@@ -348,8 +349,8 @@ color: #122C5C;
 cursor: pointer;
 
 &:hover {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-    transition: 0.5s;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+    transition: 0.25s;
 }
 }
 // Mobile styles

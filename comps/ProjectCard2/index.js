@@ -86,12 +86,12 @@ padding: 8px;
 overflow: hidden;
 margin-bottom: 8px;
 
-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
 cursor: pointer;
 
 &:hover {
     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
-    transition: 1s;
+    transition: 0.25s;
 }
 }
 // Mobile styles

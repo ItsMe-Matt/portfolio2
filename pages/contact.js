@@ -258,7 +258,7 @@ color: #868686;
 // Desktop and Tablet styles
 @media screen and (min-width: 1024px) {
 font-family: 'Oxygen';
-font-weight: 300;
+font-weight: 500;
 font-size: 1.125em;
 line-height: 28px;
 color: #868686;
